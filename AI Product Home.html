@@ -1,0 +1,2364 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ship With AI - The Product Designer's Bootcamp</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    
+
+    <style>
+      body { font-family: 'Inter', sans-serif; }
+      .font-manrope { font-family: 'Manrope', sans-serif; }
+      .hide-scrollbar::-webkit-scrollbar { display: none; }
+      .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+      /* Smooth Scroll Behavior */
+      html { scroll-behavior: smooth; }
+    </style>
+    <meta name="disabled-font-classes" content="font-roboto,font-montserrat,font-poppins,font-playfair,font-merriweather,font-bricolage,font-jakarta,font-space-grotesk,font-work-sans,font-pt-serif,font-geist-mono,font-space-mono,font-quicksand,font-nunito,font-google-sans-flex,font-oswald,font-dm-sans,font-cormorant,font-instrument-serif,font-manrope">
+
+    
+    
+  <link id="all-fonts-link-font-newsreader" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..800&amp;display=swap"><style id="all-fonts-style-font-newsreader">
+.font-newsreader { font-family: 'Newsreader', serif !important; }
+</style><link id="all-fonts-link-font-geist" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist">.font-geist { font-family: 'Geist', sans-serif !important; }</style></head>
+  <body class="antialiased selection:bg-indigo-500 selection:text-white text-gray-900 bg-gray-50">
+
+
+
+    <!-- Main Wrapper with Vertical Layout Lines -->
+    <div class="mx-auto max-w-7xl border-l border-r border-dashed border-neutral-300 min-h-screen relative bg-white/50">
+      <!-- Vertical Grid Lines Background (Subtle) -->
+      <div class="absolute inset-0 pointer-events-none flex justify-between px-4 opacity-20 z-0">
+        <div class="w-px h-full bg-neutral-300"></div>
+        <div class="w-px h-full bg-neutral-300"></div>
+        <div class="w-px h-full bg-neutral-300"></div>
+      </div>
+
+      <main class="z-10 md:p-6 lg:p-8 pt-4 pr-4 pb-4 pl-4 relative space-y-6">
+        <!-- HERO SECTION -->
+        <section class="overflow-hidden min-h-[600px] flex flex-col shadow-neutral-200 lg:p-12 text-white bg-[#08090a] w-full rounded-[2.5rem] pt-8 pr-8 pb-8 pl-8 relative shadow-2xl gap-y-8 justify-between">
+          <!-- Background Abstract Image -->
+          <div class="z-0 absolute top-0 right-0 bottom-0 left-0">
+            <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/7c3ccc9e-7f0f-443b-90fb-49733c64155b_original.png" alt="Abstract AI" class="contrast-125 opacity-40 mix-blend-overlay w-full h-full object-cover grayscale">
+            <div class="bg-gradient-to-t from-[#08090a] via-[#08090a]/40 to-[#08090a]/90 absolute top-0 right-0 bottom-0 left-0" style="height: 110%"></div>
+            <!-- Subtle Mesh Gradient -->
+            <div class="blur-[100px] mix-blend-normal w-[500px] h-[500px] rounded-full absolute top-0 right-0 blur-none"></div>
+          </div>
+
+          <!-- Navigation Pill -->
+          <div class="z-10 flex w-full relative justify-center">
+            <nav class="flex gap-6 shadow-black/20 text-sm bg-white/5 border-white/10 border rounded-full pt-2 pr-2 pb-2 pl-4 shadow-lg backdrop-blur-md gap-x-6 gap-y-6 items-center">
+              <a href="#" class="flex items-center gap-2 font-semibold tracking-tight text-white pr-4 border-r border-white/10 font-geist">
+                <iconify-icon icon="solar:ufo-3-outline" class="text-lg text-orange-400" width="18" height="18" style="color: rgb(251, 146, 60);"></iconify-icon>
+                ShipWithAI
+              </a>
+              <div class="hidden md:flex items-center gap-6">
+                <a href="/#sessions" class="hover:text-white transition-colors font-medium text-neutral-300 font-geist">Curriculum</a>
+                <a href="/#about" class="hover:text-white transition-colors font-medium text-neutral-300 font-geist">About</a>
+                <a href="/#faq" class="hover:text-white transition-colors font-medium text-neutral-300 font-geist">FAQ</a>
+              </div>
+              <button class="transition-colors hover:bg-orange-50 text-xs font-semibold text-black tracking-tight bg-white rounded-full pt-2 pr-5 pb-2 pl-5 font-geist" onclick="window.location.href='/apply-page'" role="button">Apply for Cohort I</button>
+            </nav>
+          </div>
+
+          <!-- Hero Content -->
+          <div class="max-w-4xl z-10 mt-auto relative space-y-4">
+            <div class="inline-flex uppercase text-xs font-semibold text-orange-300 tracking-wider text-center bg-orange-500/10 border-orange-500/30 border rounded-full mb-6 pt-1 pr-3 pb-1 pl-3 backdrop-blur-sm gap-x-2 gap-y-2 items-center font-geist">
+              <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 bg-orange-400"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
+              </span>
+              2-WEEK BOOTCAMP STARTS MARCH 17
+            </div>
+            <h1 class="md:text-7xl leading-[1.05] text-5xl font-light text-white tracking-tighter font-newsreader mb-6">
+              Turn AI Into Your Senior
+              <br class="hidden lg:block">
+              Design Partner.
+              <span class="text-neutral-500 tracking-tighter font-newsreader font-light">
+                Ship Real Work in Half the Time.
+              </span>
+            </h1>
+            <p class="text-lg text-neutral-400 leading-relaxed mb-8 max-w-2xl font-normal font-geist">
+              6 live sessions. 12 production-ready AI workflows. A repeatable
+              system for product designers and PMs who want to stop doing
+              busywork and start shipping faster.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 mb-10">
+              <button class="hover:bg-neutral-100 transition-colors shadow-white/10 text-sm font-semibold text-black tracking-tight bg-white rounded-full pt-3.5 pr-8 pb-3.5 pl-8 shadow-lg font-geist" onclick="window.location.href='/apply-page'" role="button">
+                Join the March Bootcamp
+              </button>
+              <button class="hover:bg-white/10 transition-colors text-sm font-semibold text-white tracking-tight bg-transparent border-white/20 border rounded-full pt-3.5 pr-8 pb-3.5 pl-8 font-geist" onclick="window.location.href='/#sessions'" role="button">
+                See How It Works
+              </button>
+            </div>
+            <p class="flex items-center gap-2 text-xs font-medium text-neutral-500 font-geist">
+              <iconify-icon icon="solar:verified-check-linear" class="text-sm text-orange-400"></iconify-icon>
+              Built by a Senior Product Designer with 13+ years at Amazon,
+              Booking.com, and Etisalat
+            </p>
+          </div>
+
+          <!-- Floating Badge -->
+          <div class="absolute bottom-12 right-12 z-20 hidden md:flex items-center gap-3 bg-white/5 backdrop-blur-md border border-white/10 p-2 pr-5 rounded-2xl shadow-xl">
+            <div class="w-12 h-16 bg-gradient-to-br rounded-xl relative shadow-lg flex items-center justify-center from-orange-500 to-orange-600">
+              <iconify-icon icon="solar:laptop-3-outline" class="text-2xl text-white" width="24" height="24" style="color: rgb(255, 255, 255);"></iconify-icon>
+            </div>
+            <div class="">
+              <p class="text-xs text-neutral-400 uppercase tracking-widest font-medium font-geist">
+                Next Cohort
+              </p>
+              <p class="text-sm font-medium text-white font-geist">Mar 17, 2026</p>
+            </div>
+            <div class="flex gap-2 ml-4">
+              <button class="h-8 w-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition text-white">
+                <iconify-icon icon="solar:arrow-left-linear" class="text-lg"></iconify-icon>
+              </button>
+              <button class="h-8 w-8 rounded-full bg-white flex items-center justify-center hover:bg-neutral-200 transition text-black">
+                <iconify-icon icon="solar:arrow-right-linear" class="text-lg"></iconify-icon>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- THREE COLUMN GRID SECTION -->
+        <section class="py-24 relative">
+          <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <!-- Section Label -->
+            <div class="mb-16">
+              <div class="inline-flex items-center rounded-full border border-neutral-200 bg-white/80 backdrop-blur-sm px-3 py-1 text-xs text-neutral-500 shadow-sm font-medium font-geist">
+                The Problem
+              </div>
+            </div>
+
+            <!-- Section Heading -->
+            <h2 class="text-4xl md:text-5xl lg:text-6xl text-neutral-900 mb-16 max-w-4xl leading-[1.05] tracking-tighter font-newsreader font-light">
+              You're Not Slow.
+              <span class="text-neutral-400 tracking-tighter font-newsreader font-light">
+                Your Workflow Is.
+              </span>
+            </h2>
+
+            <!-- Two Column Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+              <!-- Left Column: Problem Text -->
+              <div class="space-y-6">
+                <p class="text-lg text-neutral-500 leading-relaxed font-normal font-geist">
+                  You spend 60% of your week on work that isn't design.
+                  Synthesizing research notes. Writing PRDs. Updating tickets.
+                  Creating presentation decks. Documenting design decisions.
+                  Reformatting specs for developers. Writing microcopy
+                  variations.
+                </p>
+                <p class="text-lg text-neutral-500 leading-relaxed font-normal font-geist">
+                  You know AI can help. You've tried ChatGPT. Maybe Claude. You
+                  copied prompts from Twitter threads. You got a mediocre
+                  competitor audit back and thought:
+                  <span class="text-neutral-700 italic font-geist">
+                    I could have done this faster myself.
+                  </span>
+                </p>
+                <div class="pt-4">
+                  <p class="text-xl md:text-2xl text-neutral-900 leading-snug tracking-tight font-newsreader font-light">
+                    That's because chat prompts aren't workflows.
+                  </p>
+                  <div class="mt-4 h-1 w-16 rounded-full bg-orange-500"></div>
+                </div>
+              </div>
+
+              <!-- Right Column: Dark Card -->
+              <div class="relative group">
+                <div class="bg-[#08090a] rounded-[2rem] p-8 lg:p-10 relative overflow-hidden min-h-full">
+                  <!-- Subtle glow -->
+                  <div class="absolute -right-20 -top-20 w-60 h-60 rounded-full blur-[80px] pointer-events-none bg-orange-600/15"></div>
+
+                  <div class="relative z-10">
+                    <h3 class="text-2xl text-white mb-8 tracking-tight font-newsreader font-light">
+                      What if instead…
+                    </h3>
+
+                    <div class="space-y-6">
+                      <!-- Item 1 -->
+                      <div class="flex items-start gap-4 group/item">
+                        <div class="mt-1 flex-shrink-0 w-8 h-8 rounded-xl border flex items-center justify-center bg-orange-500/10 border-orange-500/20">
+                          <div class="w-2 h-2 rounded-full bg-orange-400"></div>
+                        </div>
+                        <div>
+                          <p class="text-[15px] text-neutral-300 leading-relaxed font-geist">
+                            Your research synthesis took
+                            <span class="text-white font-medium font-geist">
+                              3 minutes
+                            </span>
+                            , not 3 hours
+                          </p>
+                        </div>
+                      </div>
+
+                      <!-- Item 2 -->
+                      <div class="flex items-start gap-4 group/item">
+                        <div class="mt-1 flex-shrink-0 w-8 h-8 rounded-xl border flex items-center justify-center bg-orange-500/10 border-orange-500/20">
+                          <div class="w-2 h-2 rounded-full bg-orange-400"></div>
+                        </div>
+                        <div class="">
+                          <p class="text-[15px] text-neutral-300 leading-relaxed font-geist">
+                            Your PRDs
+                            <span class="text-white font-medium font-geist">
+                              wrote themselves
+                            </span>
+                            from your research notes
+                          </p>
+                        </div>
+                      </div>
+
+                      <!-- Item 3 -->
+                      <div class="flex items-start gap-4 group/item">
+                        <div class="mt-1 flex-shrink-0 w-8 h-8 rounded-xl border flex items-center justify-center bg-orange-500/10 border-orange-500/20">
+                          <div class="w-2 h-2 rounded-full bg-orange-400"></div>
+                        </div>
+                        <div class="">
+                          <p class="text-[15px] text-neutral-300 leading-relaxed font-geist">
+                            Your Figma designs turned into
+                            <span class="text-white font-medium font-geist">
+                              working prototypes
+                            </span>
+                            without code
+                          </p>
+                        </div>
+                      </div>
+
+                      <!-- Item 4 -->
+                      <div class="flex items-start gap-4 group/item">
+                        <div class="mt-1 flex-shrink-0 w-8 h-8 rounded-xl border flex items-center justify-center bg-orange-500/10 border-orange-500/20">
+                          <div class="w-2 h-2 rounded-full bg-orange-400"></div>
+                        </div>
+                        <div class="">
+                          <p class="text-[15px] text-neutral-300 leading-relaxed font-geist">
+                            Every repetitive task you do was saved as a
+                            <span class="text-white font-medium font-geist">
+                              reusable workflow
+                            </span>
+                            forever
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Bottom accent -->
+                    <div class="mt-8 pt-6 border-t border-white/10">
+                      <p class="text-xs text-neutral-500 uppercase tracking-widest font-medium flex items-center gap-2 font-geist">
+                        <iconify-icon icon="solar:arrow-right-down-linear" class="text-sm text-orange-400"></iconify-icon>
+                        This is what Ship With AI teaches you to build
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-6 pt-12 gap-x-6 gap-y-6">
+          <!-- Col 1: Text -->
+          <div class="lg:col-span-4 flex flex-col justify-between space-y-12 py-4">
+            <div class="flex border-neutral-200 border-b pb-4 justify-between">
+              <span class="text-sm text-black font-medium font-geist">
+                Beyond the Chat Window
+              </span>
+              <div class="flex gap-2 text-neutral-400 text-xs">
+                <span class="font-geist">.skills</span>
+                <span class="font-geist">Workflows</span>
+              </div>
+            </div>
+
+            <div class="">
+              <h3 class="text-3xl lg:text-4xl text-neutral-900 leading-[1.1] mb-6 tracking-tighter font-newsreader font-light">
+                What are
+                <span class="tracking-tighter font-newsreader font-light text-orange-500">
+                  .skills
+                </span>
+                <br>
+                <span class="text-neutral-400 tracking-tighter font-newsreader font-light">
+                  and why should
+                </span>
+                <br>
+                you care?
+              </h3>
+              <p class="text-lg text-neutral-500 leading-relaxed mb-8 font-normal font-geist">
+                A
+                <span class="text-neutral-700 font-medium font-geist">
+                  .skill
+                </span>
+                is a reusable AI workflow you build once and use forever. It
+                connects to the tools you already use. It follows your process,
+                writes in your voice, and delivers finished output. Not generic
+                AI slop. Real work, done your way.
+              </p>
+
+              <button class="group flex items-center gap-3 bg-neutral-900 text-white pl-5 pr-2 py-2 rounded-full text-base font-medium hover:bg-neutral-800 transition-all">
+                <span class="text-sm font-geist">Explore .skills Library</span>
+                <span class="bg-white text-black rounded-full w-8 h-8 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <iconify-icon icon="solar:arrow-right-linear" class="text-lg"></iconify-icon>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Col 2: Card Light — Chat Prompt -->
+          <div class="lg:col-span-4 relative group cursor-pointer">
+            <div class="relative h-[500px] w-full rounded-[2rem] overflow-hidden bg-neutral-100 border border-neutral-200">
+              <!-- Content Visual -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-[80%] h-[70%] bg-white rounded-xl shadow-xl border border-neutral-200/50 transform rotate-[-6deg] transition-transform duration-700 group-hover:rotate-0 flex flex-col overflow-hidden">
+                  <div class="h-8 bg-neutral-50 border-b border-neutral-100 flex items-center px-3 gap-1.5">
+                    <div class="w-2 h-2 rounded-full bg-orange-400"></div>
+                    <div class="w-2 h-2 rounded-full bg-orange-400"></div>
+                    <div class="w-2 h-2 rounded-full bg-cyan-400"></div>
+                  </div>
+                  <div class="p-4 space-y-3">
+                    <!-- Chat bubble simulation -->
+                    <div class="flex gap-3">
+                      <div class="w-8 h-8 rounded-full bg-neutral-100 flex-shrink-0"></div>
+                      <div class="bg-neutral-50 rounded-lg rounded-tl-none p-3 flex-1">
+                        <div class="h-2 w-full bg-neutral-200 rounded-full mb-1.5"></div>
+                        <div class="h-2 w-3/4 bg-neutral-200 rounded-full"></div>
+                      </div>
+                    </div>
+                    <div class="flex gap-3 justify-end">
+                      <div class="rounded-lg rounded-tr-none p-3 max-w-[75%] bg-orange-50">
+                        <div class="h-2 w-full rounded-full mb-1.5 bg-orange-100"></div>
+                        <div class="h-2 w-2/3 rounded-full bg-orange-100"></div>
+                      </div>
+                      <div class="w-8 h-8 rounded-full flex-shrink-0 bg-orange-100"></div>
+                    </div>
+                    <!-- Rewrite indicator -->
+                    <div class="flex items-center gap-2 pt-2">
+                      <iconify-icon icon="solar:refresh-linear" class="text-neutral-300 text-sm"></iconify-icon>
+                      <div class="h-1.5 w-16 bg-neutral-100 rounded-full"></div>
+                      <div class="h-1.5 w-10 bg-neutral-100 rounded-full"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-b from-transparent via-transparent to-white/90 absolute top-0 right-0 bottom-0 left-0"></div>
+
+              <div class="absolute top-6 left-6 text-neutral-900">
+                <span class="inline-flex items-center rounded-full border border-neutral-200 bg-white px-2.5 py-1 text-[10px] text-neutral-500 mb-3 font-medium uppercase tracking-wider font-geist">
+                  What most designers do
+                </span>
+                <p class="text-lg tracking-tight font-semibold font-geist">
+                  Chat Prompt
+                </p>
+              </div>
+
+              <div class="absolute bottom-6 w-full px-6 flex justify-between items-end text-neutral-900">
+                <div class="">
+                  <p class="text-sm text-neutral-500 leading-relaxed max-w-[85%] font-normal font-geist">
+                    You type a question. You get a generic answer. You rewrite
+                    it anyway. Every. Single. Time.
+                  </p>
+                </div>
+                <span class="text-5xl opacity-20 tracking-tighter font-newsreader font-light">
+                  01
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Col 3: Card Dark — .skill Workflow -->
+          <div class="lg:col-span-4 relative group cursor-pointer">
+            <div class="relative h-[500px] w-full rounded-[2rem] overflow-hidden bg-[#111]">
+              <!-- Workflow Background -->
+              <div class="absolute inset-0 opacity-30 p-6">
+                <!-- Workflow chain visualization -->
+                <div class="flex flex-col gap-3 pt-12">
+                  <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg border flex items-center justify-center bg-orange-500/20 border-orange-500/30">
+                      <iconify-icon icon="solar:file-text-linear" class="text-sm text-orange-400"></iconify-icon>
+                    </div>
+                    <div class="h-px flex-1 bg-orange-500/20"></div>
+                    <div class="w-8 h-8 rounded-lg border flex items-center justify-center bg-orange-500/20 border-orange-500/30">
+                      <iconify-icon icon="solar:magic-stick-3-linear" class="text-sm text-orange-400"></iconify-icon>
+                    </div>
+                    <div class="h-px flex-1 bg-orange-500/20"></div>
+                    <div class="w-8 h-8 rounded-lg border flex items-center justify-center bg-orange-500/20 border-orange-500/30">
+                      <iconify-icon icon="solar:check-circle-linear" class="text-sm text-orange-400"></iconify-icon>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2 ml-6 mt-4">
+                    <div class="w-8 h-8 rounded-lg border flex items-center justify-center bg-orange-500/20 border-orange-500/30">
+                      <iconify-icon icon="solar:database-linear" class="text-sm text-orange-400"></iconify-icon>
+                    </div>
+                    <div class="h-px flex-1 bg-orange-500/20"></div>
+                    <div class="w-8 h-8 rounded-lg border flex items-center justify-center bg-orange-500/20 border-orange-500/30">
+                      <iconify-icon icon="solar:code-linear" class="text-sm text-orange-400"></iconify-icon>
+                    </div>
+                    <div class="h-px flex-1 bg-orange-500/20"></div>
+                    <div class="w-8 h-8 rounded-lg border flex items-center justify-center bg-orange-500/20 border-orange-500/30">
+                      <iconify-icon icon="solar:rocket-2-linear" class="text-sm text-orange-400"></iconify-icon>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2 ml-12 mt-4">
+                    <div class="w-8 h-8 rounded-lg bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center">
+                      <iconify-icon icon="solar:document-text-linear" class="text-cyan-400 text-sm"></iconify-icon>
+                    </div>
+                    <div class="h-px flex-1 bg-cyan-500/20"></div>
+                    <div class="w-8 h-8 rounded-lg bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center">
+                      <iconify-icon icon="solar:layers-minimalistic-linear" class="text-cyan-400 text-sm"></iconify-icon>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-b from-black/20 via-black/40 to-black/90 absolute top-0 right-0 bottom-0 left-0"></div>
+
+              <div class="absolute top-6 left-6 text-white z-10">
+                <span class="inline-flex items-center rounded-full border px-2.5 py-1 text-[10px] mb-3 font-medium uppercase tracking-wider border-orange-400/30 bg-orange-400/10 text-orange-400 font-geist">
+                  What you'll learn here
+                </span>
+                <p class="text-lg tracking-tight font-semibold font-geist">
+                  .skill Workflow
+                </p>
+              </div>
+
+              <div class="absolute bottom-6 w-full px-6 flex justify-between items-end text-white z-10">
+                <div class="max-w-[75%]">
+                  <p class="text-sm text-neutral-400 leading-relaxed font-normal font-geist">
+                    You run a workflow. It pulls from your files, follows your
+                    process, and delivers production-ready output. You approve
+                    and move on.
+                  </p>
+                  <button class="mt-4 flex items-center gap-2 text-white px-4 py-2 rounded-full text-xs transition font-medium bg-orange-600 hover:bg-orange-500 font-geist">
+                    See How It Works
+                    <iconify-icon icon="solar:arrow-right-linear" class="text-sm"></iconify-icon>
+                  </button>
+                </div>
+                <span class="text-5xl opacity-30 tracking-tighter font-newsreader font-light">
+                  02
+                </span>
+              </div>
+            </div>
+
+            <!-- Navigation Below Grid -->
+            <div class="flex justify-end mt-4 gap-3">
+              <button class="w-10 h-10 rounded-full border border-neutral-300 flex items-center justify-center hover:border-neutral-900 transition text-neutral-500 hover:text-neutral-900">
+                <iconify-icon icon="solar:arrow-left-linear" class="text-lg"></iconify-icon>
+              </button>
+              <button class="w-10 h-10 rounded-full bg-neutral-900 text-white flex items-center justify-center hover:bg-black transition">
+                <iconify-icon icon="solar:arrow-right-linear" class="text-lg"></iconify-icon>
+              </button>
+            </div>
+          </div>
+
+          <!-- Full Width Card: Chained .skills -->
+          <div class="lg:col-span-12 relative group cursor-pointer">
+            <div class="relative w-full rounded-[2rem] overflow-hidden bg-gradient-to-r from-[#08090a] to-[#111] border border-white/5 p-8 lg:p-10">
+              <!-- Background glow -->
+              <div class="absolute -right-20 -top-20 w-80 h-80 rounded-full blur-[100px] pointer-events-none bg-orange-600/10"></div>
+              <div class="absolute -left-20 -bottom-20 w-60 h-60 rounded-full blur-[80px] pointer-events-none bg-orange-600/10"></div>
+
+              <div class="relative z-10 flex flex-col lg:flex-row items-start lg:items-center gap-8 lg:gap-16">
+                <!-- Left: Label + Title -->
+                <div class="flex-shrink-0 lg:max-w-md">
+                  <span class="inline-flex items-center rounded-full border px-2.5 py-1 text-[10px] mb-4 font-medium uppercase tracking-wider border-orange-400/30 bg-orange-400/10 text-orange-400 font-geist">
+                    Where the real leverage is
+                  </span>
+                  <h4 class="text-2xl text-white mb-3 tracking-tighter font-newsreader font-light">
+                    Chained .skills
+                  </h4>
+                  <p class="text-sm text-neutral-400 leading-relaxed font-normal font-geist">
+                    One workflow feeds into the next. Research becomes
+                    requirements. Requirements become specs. Specs become
+                    prototypes. Automatically.
+                  </p>
+                </div>
+
+                <!-- Right: Chain Visualization -->
+                <div class="flex-1 w-full">
+                  <div class="flex items-center gap-3 overflow-x-auto hide-scrollbar py-2">
+                    <!-- Step 1 -->
+                    <div class="flex-shrink-0 bg-white/[0.04] border border-white/10 rounded-xl px-4 py-3 min-w-[140px] group-hover:bg-white/[0.06] transition-colors">
+                      <div class="w-8 h-8 rounded-lg border flex items-center justify-center mb-2 bg-orange-500/15 border-orange-500/20">
+                        <iconify-icon icon="solar:magnifer-linear" class="text-sm text-orange-400"></iconify-icon>
+                      </div>
+                      <p class="text-xs text-white font-medium font-geist">
+                        Research
+                      </p>
+                      <p class="text-[10px] text-neutral-500 mt-0.5 font-geist">
+                        Synthesize data
+                      </p>
+                    </div>
+
+                    <iconify-icon icon="solar:arrow-right-linear" class="text-neutral-600 text-lg flex-shrink-0"></iconify-icon>
+
+                    <!-- Step 2 -->
+                    <div class="flex-shrink-0 bg-white/[0.04] border border-white/10 rounded-xl px-4 py-3 min-w-[140px] group-hover:bg-white/[0.06] transition-colors">
+                      <div class="w-8 h-8 rounded-lg border flex items-center justify-center mb-2 bg-orange-500/15 border-orange-500/20">
+                        <iconify-icon icon="solar:document-text-linear" class="text-sm text-orange-400"></iconify-icon>
+                      </div>
+                      <p class="text-xs text-white font-medium font-geist">
+                        Requirements
+                      </p>
+                      <p class="text-[10px] text-neutral-500 mt-0.5 font-geist">
+                        Auto-generate PRD
+                      </p>
+                    </div>
+
+                    <iconify-icon icon="solar:arrow-right-linear" class="text-neutral-600 text-lg flex-shrink-0"></iconify-icon>
+
+                    <!-- Step 3 -->
+                    <div class="flex-shrink-0 bg-white/[0.04] border border-white/10 rounded-xl px-4 py-3 min-w-[140px] group-hover:bg-white/[0.06] transition-colors">
+                      <div class="w-8 h-8 rounded-lg border flex items-center justify-center mb-2 bg-orange-500/15 border-orange-500/20">
+                        <iconify-icon icon="solar:layers-minimalistic-linear" class="text-sm text-orange-400"></iconify-icon>
+                      </div>
+                      <p class="text-xs text-white font-medium font-geist">
+                        Specs
+                      </p>
+                      <p class="text-[10px] text-neutral-500 mt-0.5 font-geist">
+                        Design tokens &amp; docs
+                      </p>
+                    </div>
+
+                    <iconify-icon icon="solar:arrow-right-linear" class="text-neutral-600 text-lg flex-shrink-0"></iconify-icon>
+
+                    <!-- Step 4 -->
+                    <div class="flex-shrink-0 bg-white/[0.04] border border-white/10 rounded-xl px-4 py-3 min-w-[140px] group-hover:bg-white/[0.06] transition-colors">
+                      <div class="w-8 h-8 rounded-lg bg-cyan-500/15 border border-cyan-500/20 flex items-center justify-center mb-2">
+                        <iconify-icon icon="solar:code-linear" class="text-cyan-400 text-sm"></iconify-icon>
+                      </div>
+                      <p class="text-xs text-white font-medium font-geist">
+                        Prototype
+                      </p>
+                      <p class="text-[10px] text-neutral-500 mt-0.5 font-geist">
+                        Working code output
+                      </p>
+                    </div>
+
+                    <iconify-icon icon="solar:arrow-right-linear" class="text-neutral-600 text-lg flex-shrink-0"></iconify-icon>
+
+                    <!-- Step 5: Deployed -->
+                    <div class="flex-shrink-0 border rounded-xl px-4 py-3 min-w-[140px] shadow-[0_0_25px_rgba(99,102,241,0.1)] bg-orange-500/10 border-orange-500/20">
+                      <div class="w-8 h-8 rounded-lg border flex items-center justify-center mb-2 bg-orange-500/20 border-orange-500/30">
+                        <iconify-icon icon="solar:rocket-2-linear" class="text-sm text-orange-400"></iconify-icon>
+                      </div>
+                      <p class="text-xs text-white font-medium font-geist">
+                        Shipped
+                      </p>
+                      <p class="text-[10px] mt-0.5 text-orange-400 font-geist">
+                        Live in production
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bottom accent number -->
+              <span class="absolute bottom-6 right-8 text-5xl opacity-20 text-white tracking-tighter font-newsreader font-light">
+                03
+              </span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════ -->
+        <!-- SKILLS LIBRARY SECTION -->
+        <!-- ═══════════════════════════════════════════════ -->
+        <section class="overflow-hidden bg-neutral-100/50 border-neutral-200/60 pt-24 pb-24 relative rounded-[2.5rem]">
+          <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-30 mix-blend-soft-light pointer-events-none"></div>
+
+          <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <!-- Section Header -->
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 gap-8">
+              <div class="">
+                <div class="inline-flex items-center rounded-full border border-neutral-200 bg-white/80 backdrop-blur-sm px-3 py-1 text-xs text-neutral-500 mb-6 shadow-sm font-medium font-geist">
+                  .skills Library
+                </div>
+                <h2 class="text-4xl md:text-5xl lg:text-5xl text-neutral-900 max-w-3xl leading-[1.05] tracking-tighter font-newsreader font-light">
+                  12 Production-Ready
+                  <span class="text-orange-500 tracking-tighter font-newsreader font-light">
+                    .skills
+                  </span>
+                  <span class="text-neutral-400 tracking-tighter font-newsreader font-light">
+                    Included
+                  </span>
+                </h2>
+                <p class="text-lg text-neutral-500 leading-relaxed mt-4 max-w-xl font-normal font-geist">
+                  Install once. Use forever. Every .skill is tested and ready to
+                  go on day one.
+                </p>
+              </div>
+              <a href="#" class="group inline-flex items-center text-sm text-neutral-900 transition-colors border-b border-neutral-900 pb-0.5 whitespace-nowrap font-medium hover:text-orange-600 hover:border-orange-600 font-geist">
+                Browse All Skills
+                <iconify-icon icon="solar:arrow-right-up-linear" class="ml-1 text-lg transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></iconify-icon>
+              </a>
+            </div>
+
+            <!-- Skills Grid: 4x3 -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <!-- Skill 1 -->
+              <div class="group bg-white rounded-2xl border border-neutral-100 p-6 shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-1 hover:border-neutral-200">
+                <div class="flex items-start gap-4">
+                  <div class="flex-shrink-0 w-10 h-10 rounded-xl border flex items-center justify-center bg-orange-50 border-orange-100 group-hover:bg-orange-100 transition-colors">
+                    <iconify-icon icon="solar:document-text-linear" class="text-lg text-orange-500" style="stroke-width: 1.5"></iconify-icon>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h4 class="text-sm text-neutral-900 font-semibold mb-1 tracking-tight font-geist">
+                      Design Brief Generator
+                    </h4>
+                    <p class="text-xs text-neutral-500 leading-relaxed font-normal font-geist">
+                      Turn messy requirements into structured briefs
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Skill 2 -->
+              <div class="group bg-white rounded-2xl border border-neutral-100 p-6 shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-1 hover:border-neutral-200">
+                <div class="flex items-start gap-4">
+                  <div class="flex-shrink-0 w-10 h-10 rounded-xl border flex items-center justify-center bg-orange-50 border-orange-100 group-hover:bg-orange-100 transition-colors">
+                    <iconify-icon icon="solar:user-speak-linear" class="text-lg text-orange-500" style="stroke-width: 1.5"></iconify-icon>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h4 class="text-sm text-neutral-900 font-semibold mb-1 tracking-tight font-geist">
+                      User Interview Analyzer
+                    </h4>
+                    <p class="text-xs text-neutral-500 leading-relaxed font-normal font-geist">
+                      Extract themes, pain points, and opportunities from
+                      transcripts
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Skill 3 -->
+              <div class="group bg-white rounded-2xl border border-neutral-100 p-6 shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-1 hover:border-neutral-200">
+                <div class="flex items-start gap-4">
+                  <div class="flex-shrink-0 w-10 h-10 rounded-xl border flex items-center justify-center bg-orange-50 border-orange-100 group-hover:bg-orange-100 transition-colors">
+                    <iconify-icon icon="solar:chart-square-linear" class="text-lg text-orange-500" style="stroke-width: 1.5"></iconify-icon>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h4 class="text-sm text-neutral-900 font-semibold mb-1 tracking-tight font-geist">
+                      Competitive Audit Generator
+                    </h4>
+                    <p class="text-xs text-neutral-500 leading-relaxed font-normal font-geist">
+                      Structured competitor comparisons, not walls of text
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Skill 4 -->
+              <div class="group bg-white rounded-2xl border border-neutral-100 p-6 shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-1 hover:border-neutral-200">
+                <div class="flex items-start gap-4">
+                  <div class="flex-shrink-0 w-10 h-10 rounded-xl border flex items-center justify-center bg-orange-50 border-orange-100 group-hover:bg-orange-100 transition-colors">
+                    <iconify-icon icon="solar:filter-linear" class="text-lg text-orange-500" style="stroke-width: 1.5"></iconify-icon>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h4 class="text-sm text-neutral-900 font-semibold mb-1 tracking-tight font-geist">
+                      Stakeholder Brief Distiller
+                    </h4>
+                    <p class="text-xs text-neutral-500 leading-relaxed font-normal font-geist">
+                      Turn rambling requirements into clear problem statements
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Skill 5 -->
+              <div class="group bg-white rounded-2xl border border-neutral-100 p-6 shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-1 hover:border-neutral-200">
+                <div class="flex items-start gap-4">
+                  <div class="flex-shrink-0 w-10 h-10 rounded-xl border flex items-center justify-center bg-orange-50 border-orange-100 group-hover:bg-orange-100 transition-colors">
+                    <iconify-icon icon="solar:clipboard-text-linear" class="text-lg text-orange-500" style="stroke-width: 1.5"></iconify-icon>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h4 class="text-sm text-neutral-900 font-semibold mb-1 tracking-tight font-geist">
+                      PRD Generator
+                    </h4>
+                    <p class="text-xs text-neutral-500 leading-relaxed font-normal font-geist">
+                      Research-to-requirements in your company's format
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Skill 6 -->
+              <div class="group bg-white rounded-2xl border border-neutral-100 p-6 shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-1 hover:border-neutral-200">
+                <div class="flex items-start gap-4">
+                  <div class="flex-shrink-0 w-10 h-10 rounded-xl border flex items-center justify-center bg-orange-50 border-orange-100 group-hover:bg-orange-100 transition-colors">
+                    <iconify-icon icon="solar:target-linear" class="text-lg text-orange-500" style="stroke-width: 1.5"></iconify-icon>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h4 class="text-sm text-neutral-900 font-semibold mb-1 tracking-tight font-geist">
+                      Design Criteria Builder
+                    </h4>
+                    <p class="text-xs text-neutral-500 leading-relaxed font-normal font-geist">
+                      Create testable success metrics for your designs
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Skill 7 -->
+              <div class="group bg-white rounded-2xl border border-neutral-100 p-6 shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-1 hover:border-neutral-200">
+                <div class="flex items-start gap-4">
+                  <div class="flex-shrink-0 w-10 h-10 rounded-xl border flex items-center justify-center bg-orange-50 border-orange-100 group-hover:bg-orange-100 transition-colors">
+                    <iconify-icon icon="solar:user-check-linear" class="text-lg text-orange-500" style="stroke-width: 1.5"></iconify-icon>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h4 class="text-sm text-neutral-900 font-semibold mb-1 tracking-tight font-geist">
+                      JTBD Extractor
+                    </h4>
+                    <p class="text-xs text-neutral-500 leading-relaxed font-normal font-geist">
+                      Pull Jobs-to-be-Done statements from raw research
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Skill 8 -->
+              <div class="group bg-white rounded-2xl border border-neutral-100 p-6 shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-1 hover:border-neutral-200">
+                <div class="flex items-start gap-4">
+                  <div class="flex-shrink-0 w-10 h-10 rounded-xl border flex items-center justify-center bg-orange-50 border-orange-100 group-hover:bg-orange-100 transition-colors">
+                    <iconify-icon icon="solar:notebook-linear" class="text-lg text-orange-500" style="stroke-width: 1.5"></iconify-icon>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h4 class="text-sm text-neutral-900 font-semibold mb-1 tracking-tight font-geist">
+                      Design Decision Logger
+                    </h4>
+                    <p class="text-xs text-neutral-500 leading-relaxed font-normal font-geist">
+                      Document your design rationale as you work
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Skill 9 -->
+              <div class="group bg-white rounded-2xl border border-neutral-100 p-6 shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-1 hover:border-neutral-200">
+                <div class="flex items-start gap-4">
+                  <div class="flex-shrink-0 w-10 h-10 rounded-xl border flex items-center justify-center bg-orange-50 border-orange-100 group-hover:bg-orange-100 transition-colors">
+                    <iconify-icon icon="solar:hand-shake-linear" class="text-lg text-orange-500" style="stroke-width: 1.5"></iconify-icon>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h4 class="text-sm text-neutral-900 font-semibold mb-1 tracking-tight font-geist">
+                      Handoff Spec Generator
+                    </h4>
+                    <p class="text-xs text-neutral-500 leading-relaxed font-normal font-geist">
+                      Developer-ready specs from your Figma files
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Skill 10 -->
+              <div class="group bg-white rounded-2xl border border-neutral-100 p-6 shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-1 hover:border-neutral-200">
+                <div class="flex items-start gap-4">
+                  <div class="flex-shrink-0 w-10 h-10 rounded-xl border flex items-center justify-center bg-orange-50 border-orange-100 group-hover:bg-orange-100 transition-colors">
+                    <iconify-icon icon="solar:text-field-focus-linear" class="text-lg text-orange-500" style="stroke-width: 1.5"></iconify-icon>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h4 class="text-sm text-neutral-900 font-semibold mb-1 tracking-tight font-geist">
+                      Microcopy Variation Generator
+                    </h4>
+                    <p class="text-xs text-neutral-500 leading-relaxed font-normal font-geist">
+                      UX writing options on demand
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Skill 11 -->
+              <div class="group bg-white rounded-2xl border border-neutral-100 p-6 shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-1 hover:border-neutral-200">
+                <div class="flex items-start gap-4">
+                  <div class="flex-shrink-0 w-10 h-10 rounded-xl border flex items-center justify-center bg-orange-50 border-orange-100 group-hover:bg-orange-100 transition-colors">
+                    <iconify-icon icon="solar:accessibility-linear" class="text-lg text-orange-500" style="stroke-width: 1.5"></iconify-icon>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h4 class="text-sm text-neutral-900 font-semibold mb-1 tracking-tight font-geist">
+                      Accessibility Audit Checker
+                    </h4>
+                    <p class="text-xs text-neutral-500 leading-relaxed font-normal font-geist">
+                      Catch accessibility issues before handoff
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Skill 12 — Highlighted -->
+              <div class="group bg-neutral-900 rounded-2xl border border-neutral-800 p-6 shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.15)] transition-all duration-500 hover:-translate-y-1 relative overflow-hidden">
+                <div class="absolute -right-12 -top-12 w-32 h-32 rounded-full blur-[50px] pointer-events-none bg-orange-600/20"></div>
+                <div class="flex items-start gap-4 relative z-10">
+                  <div class="flex-shrink-0 w-10 h-10 rounded-xl border flex items-center justify-center bg-orange-500/20 border-orange-500/30 group-hover:bg-orange-500/30 transition-colors">
+                    <iconify-icon icon="solar:code-square-linear" class="text-lg text-orange-400" style="stroke-width: 1.5"></iconify-icon>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <div class="flex items-center gap-2 mb-1">
+                      <h4 class="text-sm text-white font-semibold tracking-tight font-geist">
+                        Prototype Scaffolder
+                      </h4>
+                      <span class="inline-flex items-center rounded-full border px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-wider bg-orange-500/15 border-orange-500/30 text-orange-400 font-geist">
+                        New
+                      </span>
+                    </div>
+                    <p class="text-xs text-neutral-400 leading-relaxed font-normal font-geist">
+                      Turn designs into working code prototypes
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom summary -->
+            <div class="mt-12 flex items-center justify-center gap-3">
+              <div class="h-px flex-1 max-w-[80px] bg-neutral-200"></div>
+              <p class="text-xs text-neutral-400 font-medium uppercase tracking-wider font-geist">
+                All .skills included with every plan · No add-ons
+              </p>
+              <div class="h-px flex-1 max-w-[80px] bg-neutral-200"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- BENEFITS SECTION -->
+
+        <section class="overflow-hidden bg-white/50 border-neutral-200/60 border-b pt-24 pb-24 relative" id="sessions">
+          <!-- Subtle background texture -->
+          <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-30 mix-blend-soft-light pointer-events-none"></div>
+
+          <div class="lg:px-8 z-10 max-w-7xl mr-auto ml-auto pr-6 pl-6 relative">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-20">
+              <div class="inline-flex items-center rounded-full border border-neutral-200 bg-white/80 backdrop-blur-sm px-3 py-1 text-xs text-neutral-500 mb-6 shadow-sm font-medium font-geist">
+                The Curriculum
+              </div>
+              <h2 class="text-4xl md:text-5xl text-neutral-900 mb-6 leading-[1.1] tracking-tighter font-newsreader font-light">
+                6 Sessions. 2 Weeks.
+                <br class="hidden md:block">
+                A Complete AI Design System.
+              </h2>
+              <p class="text-lg text-neutral-500 leading-relaxed max-w-2xl mx-auto font-normal font-geist">
+                Every session includes a live demo, hands-on building, and
+                .skills you keep forever.
+              </p>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-20 max-w-4xl mx-auto">
+              <div class="bg-white rounded-2xl border border-neutral-100 p-5 text-center shadow-sm">
+                <span class="block text-2xl text-neutral-900 tracking-tighter font-newsreader font-light">
+                  6
+                </span>
+                <span class="text-xs text-neutral-500 font-medium font-geist">
+                  Live Sessions
+                </span>
+              </div>
+              <div class="bg-white rounded-2xl border border-neutral-100 p-5 text-center shadow-sm">
+                <span class="block text-2xl text-neutral-900 tracking-tighter font-newsreader font-light">
+                  2
+                </span>
+                <span class="text-xs text-neutral-500 font-medium font-geist">
+                  Weeks
+                </span>
+              </div>
+              <div class="bg-white rounded-2xl border border-neutral-100 p-5 text-center shadow-sm">
+                <span class="block text-2xl text-neutral-900 tracking-tighter font-newsreader font-light">
+                  12+
+                </span>
+                <span class="text-xs text-neutral-500 font-medium font-geist">
+                  .skills Built
+                </span>
+              </div>
+              <div class="bg-white rounded-2xl border border-neutral-100 p-5 text-center shadow-sm">
+                <span class="block text-2xl text-neutral-900 tracking-tighter font-newsreader font-light">
+                  ∞
+                </span>
+                <span class="text-xs text-neutral-500 font-medium font-geist">
+                  Yours Forever
+                </span>
+              </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="max-w-5xl mr-auto ml-auto relative">
+              <!-- Vertical Line -->
+              <div class="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-neutral-200 hidden md:block"></div>
+              <div class="absolute left-6 top-0 bottom-0 w-px bg-neutral-200 md:hidden"></div>
+
+              <!-- WEEK 1 Label -->
+              <div class="relative flex justify-center mb-12">
+                <div class="bg-neutral-900 text-white px-5 py-2 rounded-full text-xs uppercase tracking-widest font-semibold z-10 shadow-lg font-geist">
+                  Week 1: Foundation
+                </div>
+              </div>
+
+              <!-- Session 1 - Left -->
+              <div class="relative flex flex-col md:flex-row md:items-start mb-12 md:mb-16">
+                <div class="absolute left-6 top-0 w-3 h-3 rounded-full border-4 border-white shadow-sm z-10 md:hidden bg-orange-500"></div>
+                <div class="absolute left-1/2 top-8 w-4 h-4 rounded-full border-4 border-white shadow-sm z-10 hidden md:block bg-orange-500"></div>
+                <div class="md:w-1/2 md:pr-12 md:text-right pl-12 md:pl-0">
+                  <div class="group bg-white rounded-2xl border border-neutral-100 p-6 lg:p-8 shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-1">
+                    <div class="flex items-center gap-2 mb-4 md:justify-end">
+                      <span class="inline-flex items-center rounded-full border px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider bg-orange-50 border-orange-100 text-orange-700 font-geist">
+                        Session 1
+                      </span>
+                      <span class="text-xs text-neutral-400 font-medium font-geist">
+                        Monday, Mar 17
+                      </span>
+                    </div>
+                    <h3 class="text-xl text-neutral-900 mb-3 tracking-tight font-newsreader font-light">
+                      Your AI Design Setup
+                    </h3>
+                    <p class="text-[15px] text-neutral-500 leading-relaxed mb-5 font-normal font-geist">
+                      Go from zero to working AI design partner. Set up Claude
+                      Desktop with Cowork, connect your tools, configure your
+                      design voice, and install your first .skill.
+                    </p>
+                    <div class="bg-gradient-to-r border rounded-xl p-4 from-orange-50 to-orange-50/50 border-orange-100/60">
+                      <div class="flex items-start gap-3">
+                        <div class="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 bg-orange-500/15">
+                          <iconify-icon icon="solar:target-linear" class="text-xs text-orange-600"></iconify-icon>
+                        </div>
+                        <div class="md:text-left">
+                          <span class="text-[10px] uppercase tracking-wider font-semibold block mb-1 text-orange-600 font-geist">
+                            Key Outcome
+                          </span>
+                          <p class="text-sm text-neutral-700 leading-relaxed font-normal font-geist">
+                            You'll generate a structured design brief from a
+                            messy Slack thread in under
+                            <span class="font-medium text-neutral-900 font-geist">
+                              3 minutes
+                            </span>
+                            .
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="md:w-1/2 hidden md:block"></div>
+              </div>
+
+              <!-- Session 2 - Right -->
+              <div class="relative flex flex-col md:flex-row md:items-start mb-12 md:mb-16">
+                <div class="absolute left-6 top-0 w-3 h-3 rounded-full border-4 border-white shadow-sm z-10 md:hidden bg-orange-500"></div>
+                <div class="absolute left-1/2 top-8 w-4 h-4 rounded-full border-4 border-white shadow-sm z-10 hidden md:block bg-orange-500"></div>
+                <div class="md:w-1/2 hidden md:block"></div>
+                <div class="md:w-1/2 md:pl-12 pl-12">
+                  <div class="group bg-white rounded-2xl border border-neutral-100 p-6 lg:p-8 shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-1">
+                    <div class="flex items-center gap-2 mb-4">
+                      <span class="inline-flex items-center rounded-full border px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider bg-orange-50 border-orange-100 text-orange-700 font-geist">
+                        Session 2
+                      </span>
+                      <span class="text-xs text-neutral-400 font-medium font-geist">
+                        Wednesday, Mar 19
+                      </span>
+                    </div>
+                    <h3 class="text-xl text-neutral-900 mb-3 tracking-tight font-newsreader font-light">
+                      Research &amp; Discovery on Autopilot
+                    </h3>
+                    <p class="text-[15px] leading-relaxed font-normal text-neutral-500 mb-5 font-geist">
+                      Build .skills that analyze user interview transcripts, run
+                      competitive audits, and distill stakeholder briefs into
+                      clear problem statements.
+                    </p>
+                    <div class="bg-gradient-to-r border rounded-xl p-4 from-orange-50 to-orange-50/50 border-orange-100/60">
+                      <div class="flex items-start gap-3">
+                        <div class="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 bg-orange-500/15">
+                          <iconify-icon icon="solar:target-linear" class="text-xs text-orange-600"></iconify-icon>
+                        </div>
+                        <div class="">
+                          <span class="text-[10px] uppercase tracking-wider font-semibold block mb-1 text-orange-600 font-geist">
+                            Key Outcome
+                          </span>
+                          <p class="text-sm text-neutral-700 leading-relaxed font-normal font-geist">
+                            You'll synthesize
+                            <span class="font-medium text-neutral-900 font-geist">
+                              6 interview transcripts
+                            </span>
+                            into a research deck in under
+                            <span class="font-medium text-neutral-900 font-geist">
+                              10 minutes
+                            </span>
+                            .
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Session 3 - Left -->
+              <div class="relative flex flex-col md:flex-row md:items-start mb-12 md:mb-16">
+                <div class="absolute left-6 top-0 w-3 h-3 rounded-full border-4 border-white shadow-sm z-10 md:hidden bg-orange-500"></div>
+                <div class="absolute left-1/2 top-8 w-4 h-4 rounded-full border-4 border-white shadow-sm z-10 hidden md:block bg-orange-500"></div>
+                <div class="md:w-1/2 md:pr-12 md:text-right pl-12 md:pl-0">
+                  <div class="group bg-white rounded-2xl border border-neutral-100 p-6 lg:p-8 shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-1">
+                    <div class="flex items-center gap-2 mb-4 md:justify-end">
+                      <span class="inline-flex items-center rounded-full border px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider bg-orange-50 border-orange-100 text-orange-700 font-geist">
+                        Session 3
+                      </span>
+                      <span class="text-xs text-neutral-400 font-medium font-geist">
+                        Friday, Mar 21
+                      </span>
+                    </div>
+                    <h3 class="text-xl text-neutral-900 mb-3 tracking-tight font-newsreader font-light">
+                      From Research to Requirements
+                    </h3>
+                    <p class="text-[15px] text-neutral-500 leading-relaxed mb-5 font-normal font-geist">
+                      Build .skills that turn research outputs into PRDs, design
+                      criteria, and Jobs-to-be-Done statements. Learn to chain
+                      workflows so the output from one feeds into the next.
+                    </p>
+                    <div class="bg-gradient-to-r border rounded-xl p-4 from-orange-50 to-orange-50/50 border-orange-100/60">
+                      <div class="flex items-start gap-3">
+                        <div class="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 bg-orange-500/15">
+                          <iconify-icon icon="solar:target-linear" class="text-xs text-orange-600"></iconify-icon>
+                        </div>
+                        <div class="md:text-left">
+                          <span class="text-[10px] uppercase tracking-wider font-semibold block mb-1 text-orange-600 font-geist">
+                            Key Outcome
+                          </span>
+                          <p class="text-sm text-neutral-700 leading-relaxed font-normal font-geist">
+                            You'll generate a complete
+                            <span class="font-medium text-neutral-900 font-geist">
+                              PRD with acceptance criteria
+                            </span>
+                            and edge cases from your research.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="md:w-1/2 hidden md:block"></div>
+              </div>
+
+              <!-- WEEK 2 Label -->
+              <div class="relative flex justify-center mb-12 mt-4">
+                <div class="text-white px-5 py-2 rounded-full text-xs uppercase tracking-widest font-semibold z-10 shadow-lg bg-orange-600 shadow-orange-500/20 font-geist">
+                  Week 2: Production
+                </div>
+              </div>
+
+              <!-- Session 4 - Right -->
+              <div class="relative flex flex-col md:flex-row md:items-start mb-12 md:mb-16">
+                <div class="absolute left-6 top-0 w-3 h-3 rounded-full border-4 border-white shadow-sm z-10 md:hidden bg-orange-500"></div>
+                <div class="absolute left-1/2 top-8 w-4 h-4 rounded-full border-4 border-white shadow-sm z-10 hidden md:block bg-orange-500"></div>
+                <div class="md:w-1/2 hidden md:block"></div>
+                <div class="md:w-1/2 md:pl-12 pl-12">
+                  <div class="group bg-white rounded-2xl border border-neutral-100 p-6 lg:p-8 shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-1">
+                    <div class="flex items-center gap-2 mb-4">
+                      <span class="inline-flex items-center rounded-full border px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider bg-orange-500/15 border-orange-500/20 text-orange-700 font-geist">
+                        Session 4
+                      </span>
+                      <span class="text-xs text-neutral-400 font-medium font-geist">
+                        Monday, Mar 24
+                      </span>
+                    </div>
+                    <h3 class="text-xl text-neutral-900 mb-3 tracking-tight font-newsreader font-light">
+                      Design Documentation That Writes Itself
+                    </h3>
+                    <p class="text-[15px] text-neutral-500 leading-relaxed mb-5 font-normal font-geist">
+                      Build .skills for design decision logs, developer handoff
+                      specs, microcopy variations, and accessibility audits.
+                      Connect Figma via MCP for the first time.
+                    </p>
+                    <div class="inline-flex items-center gap-2 bg-neutral-50 border border-neutral-100 rounded-lg px-3 py-1.5 mb-5">
+                      <iconify-icon icon="solar:figma-linear" class="text-neutral-600 text-sm"></iconify-icon>
+                      <span class="text-[11px] text-neutral-600 font-medium font-geist">
+                        First Figma MCP Connection
+                      </span>
+                    </div>
+                    <div class="bg-gradient-to-r border rounded-xl p-4 from-orange-50 to-orange-50/50 border-orange-100/60">
+                      <div class="flex items-start gap-3">
+                        <div class="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 bg-orange-500/15">
+                          <iconify-icon icon="solar:target-linear" class="text-xs text-orange-600"></iconify-icon>
+                        </div>
+                        <div>
+                          <span class="text-[10px] uppercase tracking-wider font-semibold block mb-1 text-orange-600 font-geist">
+                            Key Outcome
+                          </span>
+                          <p class="text-sm text-neutral-700 leading-relaxed font-normal font-geist">
+                            You'll generate a complete handoff document from a
+                            Figma file in
+                            <span class="font-medium text-neutral-900 font-geist">
+                              6 minutes
+                            </span>
+                            .
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Session 5 - Left -->
+              <div class="relative flex flex-col md:flex-row md:items-start mb-12 md:mb-16">
+                <div class="absolute left-6 top-0 w-3 h-3 rounded-full border-4 border-white shadow-sm z-10 md:hidden bg-orange-500"></div>
+                <div class="absolute left-1/2 top-8 w-4 h-4 rounded-full border-4 border-white shadow-sm z-10 hidden md:block bg-orange-500"></div>
+                <div class="md:w-1/2 md:pr-12 md:text-right pl-12 md:pl-0">
+                  <div class="group bg-white rounded-2xl border border-neutral-100 p-6 lg:p-8 shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-1">
+                    <div class="flex items-center gap-2 mb-4 md:justify-end">
+                      <span class="inline-flex items-center rounded-full border px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider bg-orange-500/15 border-orange-500/20 text-orange-700 font-geist">
+                        Session 5
+                      </span>
+                      <span class="text-xs text-neutral-400 font-medium font-geist">
+                        Wednesday, Mar 26
+                      </span>
+                    </div>
+                    <h3 class="text-xl text-neutral-900 mb-3 tracking-tight font-newsreader font-light">
+                      Build Working Prototypes Without Code
+                    </h3>
+                    <p class="text-[15px] text-neutral-500 leading-relaxed mb-5 font-normal font-geist">
+                      Use Claude Code and Figma MCP to turn your designs into
+                      functional HTML and React prototypes. No coding experience
+                      needed. We walk through everything step by step.
+                    </p>
+                    <div class="inline-flex items-center gap-2 bg-cyan-50 border border-cyan-100 rounded-lg px-3 py-1.5 mb-5 md:ml-auto">
+                      <iconify-icon icon="solar:shield-check-linear" class="text-cyan-600 text-sm"></iconify-icon>
+                      <span class="text-[11px] text-cyan-700 font-medium font-geist">
+                        No coding experience needed
+                      </span>
+                    </div>
+                    <div class="bg-gradient-to-r border rounded-xl p-4 from-orange-50 to-orange-50/50 border-orange-100/60">
+                      <div class="flex items-start gap-3">
+                        <div class="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 bg-orange-500/15">
+                          <iconify-icon icon="solar:target-linear" class="text-xs text-orange-600"></iconify-icon>
+                        </div>
+                        <div class="md:text-left">
+                          <span class="text-[10px] uppercase tracking-wider font-semibold block mb-1 text-orange-600 font-geist">
+                            Key Outcome
+                          </span>
+                          <p class="text-sm text-neutral-700 leading-relaxed font-normal font-geist">
+                            You'll build a working interactive prototype from a
+                            Figma design in
+                            <span class="font-medium text-neutral-900 font-geist">
+                              20 minutes
+                            </span>
+                            .
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="md:w-1/2 hidden md:block"></div>
+              </div>
+
+              <!-- Session 6 - Right (Final) -->
+              <div class="relative flex flex-col md:flex-row md:items-start mb-4">
+                <div class="absolute left-6 top-0 w-3 h-3 rounded-full border-4 border-white shadow-sm z-10 md:hidden bg-orange-500"></div>
+                <div class="absolute left-1/2 top-8 w-4 h-4 rounded-full border-4 border-white shadow-sm z-10 hidden md:block bg-orange-500"></div>
+                <div class="md:w-1/2 hidden md:block"></div>
+                <div class="md:w-1/2 md:pl-12 pl-12">
+                  <div class="group lg:p-8 hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 overflow-hidden bg-neutral-900 border-neutral-800 border rounded-2xl pt-6 pr-6 pb-6 pl-6 relative shadow-xl">
+                    <div class="absolute -right-20 -top-20 w-60 h-60 rounded-full blur-[80px] pointer-events-none bg-orange-600/15"></div>
+                    <div class="relative z-10">
+                      <div class="flex items-center gap-2 mb-4">
+                        <span class="inline-flex items-center rounded-full border px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider bg-orange-500/15 border-orange-500/30 text-orange-400 font-geist">
+                          Session 6 — Finale
+                        </span>
+                        <span class="text-xs text-neutral-500 font-medium font-geist">
+                          Friday, Mar 28
+                        </span>
+                      </div>
+                      <h3 class="text-xl text-white mb-3 tracking-tight font-newsreader font-light">
+                        Your Personal AI Design System
+                      </h3>
+                      <p class="text-[15px] text-neutral-400 leading-relaxed mb-5 font-normal font-geist">
+                        Learn the Skill Maker meta-framework to build any .skill
+                        from scratch in under 15 minutes. Set up your personal
+                        skill library and team sharing.
+                      </p>
+                      <div class="inline-flex items-center gap-2 border rounded-lg px-3 py-1.5 mb-5 bg-orange-500/10 border-orange-500/20">
+                        <iconify-icon icon="solar:star-bold" class="text-sm text-orange-400"></iconify-icon>
+                        <span class="text-[11px] font-medium text-orange-300 font-geist">
+                          Skill Maker Meta-Framework
+                        </span>
+                      </div>
+                      <div class="border rounded-xl p-4 bg-orange-500/10 border-orange-500/20">
+                        <div class="flex items-start gap-3">
+                          <div class="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 bg-orange-500/20">
+                            <iconify-icon icon="solar:target-linear" class="text-xs text-orange-400"></iconify-icon>
+                          </div>
+                          <div>
+                            <span class="text-[10px] uppercase tracking-wider font-semibold block mb-1 text-orange-400 font-geist">
+                              Key Outcome
+                            </span>
+                            <p class="text-sm text-neutral-300 leading-relaxed font-normal font-geist">
+                              You'll build a custom
+                              <span class="font-medium text-white font-geist">
+                                .skill from scratch
+                              </span>
+                              , live, for any task you choose.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Terminal Dot -->
+              <div class="relative flex justify-center mt-8">
+                <div class="hidden md:flex flex-col items-center">
+                  <div class="w-6 h-6 rounded-full flex items-center justify-center shadow-lg bg-orange-500 shadow-orange-500/30">
+                    <iconify-icon icon="solar:check-circle-bold" class="text-white text-sm"></iconify-icon>
+                  </div>
+                  <span class="mt-3 text-xs text-neutral-500 font-medium font-geist">
+                    You're ready to ship.
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom CTA -->
+            <div class="text-center mt-20">
+              <div class="inline-flex flex-col sm:flex-row items-center gap-4">
+                <button class="group flex items-center gap-3 bg-neutral-900 text-white pl-6 pr-3 py-3 rounded-full text-sm font-medium hover:bg-black transition-all shadow-lg font-sans">
+                  <span class="font-geist">Apply for the March Cohort</span>
+                  <span class="bg-white text-black rounded-full w-8 h-8 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <iconify-icon icon="solar:arrow-right-linear" class="text-lg"></iconify-icon>
+                  </span>
+                </button>
+                <button class="text-sm text-neutral-500 hover:text-neutral-900 transition-colors flex items-center gap-2 font-medium font-geist">
+                  <iconify-icon icon="solar:document-text-linear" class="text-base"></iconify-icon>
+                  Download Full Syllabus
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ═══════════════════════════════════════════════ -->
+          <!-- EVERYTHING YOU GET SECTION -->
+          <!-- ═══════════════════════════════════════════════ -->
+          <div class="relative mt-32">
+            <!-- Divider line -->
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+              <div class="h-px bg-gradient-to-r from-transparent via-neutral-200 to-transparent mb-24"></div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+              <!-- Section Header -->
+              <div class="max-w-3xl mx-auto text-center mb-16">
+                <div class="inline-flex items-center rounded-full border border-neutral-200 bg-white/80 backdrop-blur-sm px-3 py-1 text-xs text-neutral-500 mb-6 shadow-sm font-medium font-geist">
+                  What's Included
+                </div>
+                <h2 class="text-4xl md:text-5xl text-neutral-900 mb-5 leading-[1.1] tracking-tighter font-newsreader font-light">
+                  Everything You Get
+                </h2>
+                <p class="text-lg text-neutral-500 leading-relaxed max-w-xl mx-auto font-normal font-geist">
+                  Tools, frameworks, and resources designed to become part of
+                  your permanent workflow.
+                </p>
+              </div>
+
+              <!-- Items Grid -->
+              <div class="max-w-5xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                  <!-- Row 1 -->
+                  <div class="group relative bg-white rounded-2xl border border-neutral-100 p-6 shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-0.5">
+                    <div class="flex items-start gap-4">
+                      <div class="flex-shrink-0 w-10 h-10 rounded-xl border flex items-center justify-center bg-orange-50 border-orange-100">
+                        <iconify-icon icon="solar:check-circle-bold" class="text-lg text-orange-500"></iconify-icon>
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <h4 class="text-[15px] text-neutral-900 font-semibold mb-1 font-geist">
+                          6 Live Sessions
+                        </h4>
+                        <p class="text-sm text-neutral-500 leading-relaxed font-normal font-geist">
+                          90 minutes each with live demos, hands-on building,
+                          and Q&amp;A
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="group relative bg-white rounded-2xl border border-neutral-100 p-6 shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-0.5">
+                    <div class="flex items-start gap-4">
+                      <div class="flex-shrink-0 w-10 h-10 rounded-xl border flex items-center justify-center bg-orange-50 border-orange-100">
+                        <iconify-icon icon="solar:check-circle-bold" class="text-lg text-orange-500"></iconify-icon>
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <h4 class="text-[15px] text-neutral-900 font-semibold mb-1 font-geist">
+                          Session Recordings
+                        </h4>
+                        <p class="text-sm text-neutral-500 leading-relaxed font-normal font-geist">
+                          Lifetime access. Watch, rewatch, and build along at
+                          your own pace
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Row 2 -->
+                  <div class="group relative bg-white rounded-2xl border border-neutral-100 p-6 shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-0.5">
+                    <div class="flex items-start gap-4">
+                      <div class="flex-shrink-0 w-10 h-10 rounded-xl border flex items-center justify-center bg-orange-50 border-orange-100">
+                        <iconify-icon icon="solar:check-circle-bold" class="text-lg text-orange-500"></iconify-icon>
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <h4 class="text-[15px] text-neutral-900 font-semibold mb-1 font-geist">
+                          12 Pre-built .skills
+                        </h4>
+                        <p class="text-sm text-neutral-500 leading-relaxed font-normal font-geist">
+                          Production-ready workflows for research, PRDs, specs,
+                          prototypes, and more
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="group relative bg-white rounded-2xl border border-neutral-100 p-6 shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-0.5">
+                    <div class="flex items-start gap-4">
+                      <div class="flex-shrink-0 w-10 h-10 rounded-xl border flex items-center justify-center bg-orange-50 border-orange-100">
+                        <iconify-icon icon="solar:check-circle-bold" class="text-lg text-orange-500"></iconify-icon>
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <h4 class="text-[15px] text-neutral-900 font-semibold mb-1 font-geist">
+                          6 Action Guides
+                        </h4>
+                        <p class="text-sm text-neutral-500 leading-relaxed font-normal font-geist">
+                          Downloadable PDF for each session to track your
+                          progress
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Row 3 -->
+                  <div class="group relative bg-white rounded-2xl border border-neutral-100 p-6 shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-0.5">
+                    <div class="flex items-start gap-4">
+                      <div class="flex-shrink-0 w-10 h-10 rounded-xl border flex items-center justify-center bg-orange-50 border-orange-100">
+                        <iconify-icon icon="solar:check-circle-bold" class="text-lg text-orange-500"></iconify-icon>
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <h4 class="text-[15px] text-neutral-900 font-semibold mb-1 font-geist">
+                          The Skill Anatomy Framework
+                        </h4>
+                        <p class="text-sm text-neutral-500 leading-relaxed font-normal font-geist">
+                          Understand how every great .skill is structured
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="group relative bg-white rounded-2xl border border-neutral-100 p-6 shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-0.5">
+                    <div class="flex items-start gap-4">
+                      <div class="flex-shrink-0 w-10 h-10 rounded-xl border flex items-center justify-center bg-orange-50 border-orange-100">
+                        <iconify-icon icon="solar:check-circle-bold" class="text-lg text-orange-500"></iconify-icon>
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <h4 class="text-[15px] text-neutral-900 font-semibold mb-1 font-geist">
+                          The Prompt Lego Method
+                        </h4>
+                        <p class="text-sm text-neutral-500 leading-relaxed font-normal font-geist">
+                          Construct reliable prompts that produce consistent
+                          results
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Row 4 — Highlighted -->
+                  <div class="group relative rounded-2xl border border-neutral-900 p-6 shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-0.5 bg-neutral-900 overflow-hidden">
+                    <div class="absolute -right-16 -top-16 w-40 h-40 rounded-full blur-[60px] pointer-events-none bg-orange-600/15"></div>
+                    <div class="flex items-start gap-4 relative z-10">
+                      <div class="flex-shrink-0 w-10 h-10 rounded-xl border flex items-center justify-center bg-orange-500/20 border-orange-500/30">
+                        <iconify-icon icon="solar:check-circle-bold" class="text-lg text-orange-400"></iconify-icon>
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <div class="flex items-center gap-2 mb-1">
+                          <h4 class="text-[15px] text-white font-semibold font-geist">
+                            The Skill Maker
+                          </h4>
+                          <span class="inline-flex items-center rounded-full border px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider bg-orange-500/15 border-orange-500/30 text-orange-400 font-geist">
+                            Core
+                          </span>
+                        </div>
+                        <p class="text-sm text-neutral-400 leading-relaxed font-normal font-geist">
+                          A meta-skill for building new .skills from scratch in
+                          under 15 minutes
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="group relative rounded-2xl border border-neutral-900 p-6 shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-0.5 bg-neutral-900 overflow-hidden">
+                    <div class="absolute -left-16 -bottom-16 w-40 h-40 rounded-full blur-[60px] pointer-events-none bg-orange-600/15"></div>
+                    <div class="flex items-start gap-4 relative z-10">
+                      <div class="flex-shrink-0 w-10 h-10 rounded-xl border flex items-center justify-center bg-orange-500/20 border-orange-500/30">
+                        <iconify-icon icon="solar:check-circle-bold" class="text-lg text-orange-400"></iconify-icon>
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <div class="flex items-center gap-2 mb-1">
+                          <h4 class="text-[15px] text-white font-semibold font-geist">
+                            The Figma-to-Code Guide
+                          </h4>
+                          <span class="inline-flex items-center rounded-full border px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider bg-orange-500/15 border-orange-500/30 text-orange-400 font-geist">
+                            Core
+                          </span>
+                        </div>
+                        <p class="text-sm text-neutral-400 leading-relaxed font-normal font-geist">
+                          Step-by-step workflow connecting Figma MCP to Claude
+                          Code
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Bottom summary line -->
+                <div class="mt-10 flex items-center justify-center gap-3">
+                  <div class="h-px flex-1 max-w-[80px] bg-neutral-200"></div>
+                  <p class="text-xs text-neutral-400 font-medium uppercase tracking-wider font-geist">
+                    8 deliverables · Lifetime access · No subscriptions
+                  </p>
+                  <div class="h-px flex-1 max-w-[80px] bg-neutral-200"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="py-24 relative">
+          <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="mb-16">
+              <div class="inline-flex items-center rounded-full border border-neutral-200 bg-white/80 backdrop-blur-sm px-3 py-1 text-xs text-neutral-500 mb-6 shadow-sm font-medium font-geist">
+                Who It's For
+              </div>
+              <h2 class="text-4xl md:text-5xl lg:text-6xl text-neutral-900 max-w-4xl leading-[1.05] tracking-tighter font-newsreader font-light">
+                Is This Bootcamp
+                <span class="text-neutral-400 tracking-tighter font-newsreader font-light">
+                  For You?
+                </span>
+              </h2>
+            </div>
+
+            <!-- Two Column Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+              <!-- Left Column: This is for you if... -->
+              <div class="group bg-white rounded-[2rem] border border-neutral-100 p-8 lg:p-10 shadow-sm hover:shadow-[0_20px_40px_rgba(0,0,0,0.04)] transition-all duration-500">
+                <div class="flex items-center gap-3 mb-8">
+                  <div class="w-10 h-10 rounded-xl border flex items-center justify-center bg-orange-50 border-orange-100">
+                    <iconify-icon icon="solar:check-circle-bold" class="text-lg text-orange-500"></iconify-icon>
+                  </div>
+                  <h3 class="text-xl text-neutral-900 tracking-tight font-newsreader font-light">
+                    This is for you if…
+                  </h3>
+                </div>
+                <div class="space-y-5">
+                  <div class="flex items-start gap-4">
+                    <div class="mt-1.5 flex-shrink-0 w-2 h-2 rounded-full bg-orange-400"></div>
+                    <p class="text-[15px] text-neutral-600 leading-relaxed font-normal font-geist">
+                      You're a product designer or PM spending hours on
+                      documentation, research synthesis, or specs
+                    </p>
+                  </div>
+                  <div class="flex items-start gap-4">
+                    <div class="mt-1.5 flex-shrink-0 w-2 h-2 rounded-full bg-orange-400"></div>
+                    <p class="text-[15px] text-neutral-600 leading-relaxed font-normal font-geist">
+                      You've tried AI but it felt like more work than it saved
+                    </p>
+                  </div>
+                  <div class="flex items-start gap-4">
+                    <div class="mt-1.5 flex-shrink-0 w-2 h-2 rounded-full bg-orange-400"></div>
+                    <p class="text-[15px] text-neutral-600 leading-relaxed font-normal font-geist">
+                      You want to prototype faster without depending on
+                      engineering
+                    </p>
+                  </div>
+                  <div class="flex items-start gap-4">
+                    <div class="mt-1.5 flex-shrink-0 w-2 h-2 rounded-full bg-orange-400"></div>
+                    <p class="text-[15px] text-neutral-600 leading-relaxed font-normal font-geist">
+                      You're a design lead who wants to bring AI workflows to
+                      your team
+                    </p>
+                  </div>
+                  <div class="flex items-start gap-4">
+                    <div class="mt-1.5 flex-shrink-0 w-2 h-2 rounded-full bg-orange-400"></div>
+                    <p class="text-[15px] text-neutral-600 leading-relaxed font-normal font-geist">
+                      You want a structured system, not random prompt tips from
+                      Twitter
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Column: This is NOT for you if... -->
+              <div class="group relative">
+                <div class="bg-[#08090a] rounded-[2rem] p-8 lg:p-10 relative overflow-hidden min-h-full">
+                  <!-- Subtle glow -->
+                  <div class="absolute -right-20 -top-20 w-60 h-60 rounded-full blur-[80px] pointer-events-none bg-orange-600/15"></div>
+
+                  <div class="relative z-10">
+                    <div class="flex items-center gap-3 mb-8">
+                      <div class="w-10 h-10 rounded-xl border flex items-center justify-center bg-white/5 border-white/10">
+                        <iconify-icon icon="solar:close-circle-linear" class="text-lg text-neutral-400"></iconify-icon>
+                      </div>
+                      <h3 class="text-xl text-white tracking-tight font-newsreader font-light">
+                        This is NOT for you if…
+                      </h3>
+                    </div>
+                    <div class="space-y-5">
+                      <div class="flex items-start gap-4">
+                        <div class="mt-1.5 flex-shrink-0 w-2 h-2 rounded-full bg-neutral-600"></div>
+                        <p class="text-[15px] text-neutral-400 leading-relaxed font-normal font-geist">
+                          You're looking for a ChatGPT prompt library
+                        </p>
+                      </div>
+                      <div class="flex items-start gap-4">
+                        <div class="mt-1.5 flex-shrink-0 w-2 h-2 rounded-full bg-neutral-600"></div>
+                        <p class="text-[15px] text-neutral-400 leading-relaxed font-normal font-geist">
+                          You want a coding bootcamp
+                        </p>
+                      </div>
+                      <div class="flex items-start gap-4">
+                        <div class="mt-1.5 flex-shrink-0 w-2 h-2 rounded-full bg-neutral-600"></div>
+                        <p class="text-[15px] text-neutral-400 leading-relaxed font-normal font-geist">
+                          You think AI will replace designers
+                          <span class="text-neutral-500 italic font-geist">
+                            (it won't, but it will replace designers who don't
+                            use it)
+                          </span>
+                        </p>
+                      </div>
+                      <div class="flex items-start gap-4">
+                        <div class="mt-1.5 flex-shrink-0 w-2 h-2 rounded-full bg-neutral-600"></div>
+                        <p class="text-[15px] text-neutral-400 leading-relaxed font-normal font-geist">
+                          You're not willing to put in 2 weeks of focused
+                          practice
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Bottom accent -->
+                    <div class="mt-8 pt-6 border-t border-white/10">
+                      <p class="text-xs text-neutral-500 uppercase tracking-widest font-medium flex items-center gap-2 font-geist">
+                        <iconify-icon icon="solar:info-circle-linear" class="text-sm text-orange-400"></iconify-icon>
+                        Still unsure? Book a free 15-min call with a mentor
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="bonuses" class="overflow-hidden lg:p-16 bg-[#08090a] rounded-[2.5rem] pt-8 pr-8 pb-8 pl-8 relative shadow-2xl">
+          <!-- Background glow -->
+          <div class="absolute -left-20 -top-20 w-80 h-80 rounded-full blur-[120px] pointer-events-none bg-orange-600/10"></div>
+          <div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full blur-[120px] pointer-events-none bg-orange-600/8"></div>
+
+          <div class="relative z-10 max-w-5xl mx-auto">
+            <!-- Section Header -->
+            <div class="mb-12">
+              <div class="inline-flex items-center rounded-full border px-3 py-1 text-xs mb-6 font-medium border-orange-400/30 bg-orange-400/10 text-orange-400 font-geist">
+                Included Free
+              </div>
+              <h2 class="text-4xl md:text-5xl text-white leading-[1.05] tracking-tighter font-newsreader font-light">
+                Bonuses
+                <span class="text-neutral-500 tracking-tighter font-newsreader font-light">
+                  worth over £670.
+                </span>
+              </h2>
+            </div>
+
+            <!-- Bonus Cards -->
+            <div class="space-y-4">
+              <!-- Bonus 1 -->
+              <div class="group relative flex flex-col sm:flex-row sm:items-start gap-5 bg-white/[0.03] border border-white/10 rounded-2xl p-6 hover:bg-white/[0.05] hover:border-white/15 transition-all duration-300">
+                <div class="absolute top-4 right-5">
+                  <span class="inline-flex items-center rounded-full border px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider border-orange-400/30 bg-orange-400/10 text-orange-400 font-geist">
+                    Worth £79
+                  </span>
+                </div>
+                <div class="flex-shrink-0 w-10 h-10 rounded-xl border flex items-center justify-center bg-orange-500/10 border-orange-500/20">
+                  <iconify-icon icon="solar:map-linear" class="text-lg text-orange-400"></iconify-icon>
+                </div>
+                <div class="flex-1 min-w-0 pr-20 sm:pr-24">
+                  <h4 class="text-[15px] text-white font-semibold mb-1.5 tracking-tight font-geist">
+                    The AI Tools Landscape for Designers
+                  </h4>
+                  <p class="text-sm text-neutral-400 leading-relaxed font-normal font-geist">
+                    A no-fluff guide to the best AI tools for product designers
+                    as of March 2026. Claude, Figma Make, Figma MCP, Weavy AI,
+                    Google Stitch, Cursor, v0, and how they fit together.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Bonus 2 -->
+              <div class="group relative flex flex-col sm:flex-row sm:items-start gap-5 bg-white/[0.03] border border-white/10 rounded-2xl p-6 hover:bg-white/[0.05] hover:border-white/15 transition-all duration-300">
+                <div class="absolute top-4 right-5">
+                  <span class="inline-flex items-center rounded-full border px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider border-orange-400/30 bg-orange-400/10 text-orange-400 font-geist">
+                    Worth £149
+                  </span>
+                </div>
+                <div class="flex-shrink-0 w-10 h-10 rounded-xl border flex items-center justify-center bg-orange-500/10 border-orange-500/20">
+                  <iconify-icon icon="solar:case-round-linear" class="text-lg text-orange-400"></iconify-icon>
+                </div>
+                <div class="flex-1 min-w-0 pr-20 sm:pr-24">
+                  <h4 class="text-[15px] text-white font-semibold mb-1.5 tracking-tight font-geist">
+                    The Design Portfolio Accelerator .skill
+                  </h4>
+                  <p class="text-sm text-neutral-400 leading-relaxed font-normal font-geist">
+                    Takes your raw project notes, screenshots, and outcomes data
+                    and generates portfolio-ready case studies. Includes
+                    templates for Notion, personal sites, and PDF portfolios.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Bonus 3 -->
+              <div class="group relative flex flex-col sm:flex-row sm:items-start gap-5 bg-white/[0.03] border border-white/10 rounded-2xl p-6 hover:bg-white/[0.05] hover:border-white/15 transition-all duration-300">
+                <div class="absolute top-4 right-5">
+                  <span class="inline-flex items-center rounded-full border px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider border-orange-400/30 bg-orange-400/10 text-orange-400 font-geist">
+                    Worth £149
+                  </span>
+                </div>
+                <div class="flex-shrink-0 w-10 h-10 rounded-xl border flex items-center justify-center bg-orange-500/10 border-orange-500/20">
+                  <iconify-icon icon="solar:widget-linear" class="text-lg text-orange-400"></iconify-icon>
+                </div>
+                <div class="flex-1 min-w-0 pr-20 sm:pr-24">
+                  <h4 class="text-[15px] text-white font-semibold mb-1.5 tracking-tight font-geist">
+                    The PM Toolkit: 5 Extra .skills
+                  </h4>
+                  <p class="text-sm text-neutral-400 leading-relaxed font-normal font-geist">
+                    Sprint planning assistant, feature prioritization framework,
+                    stakeholder update generator, release notes writer, and
+                    metrics dashboard summarizer.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Bonus 4 -->
+              <div class="group relative flex flex-col sm:flex-row sm:items-start gap-5 bg-white/[0.03] border border-white/10 rounded-2xl p-6 hover:bg-white/[0.05] hover:border-white/15 transition-all duration-300">
+                <div class="absolute top-4 right-5">
+                  <span class="inline-flex items-center rounded-full border px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider border-orange-400/30 bg-orange-400/10 text-orange-400 font-geist">
+                    Worth £99
+                  </span>
+                </div>
+                <div class="flex-shrink-0 w-10 h-10 rounded-xl border flex items-center justify-center bg-orange-500/10 border-orange-500/20">
+                  <iconify-icon icon="solar:pen-linear" class="text-lg text-orange-400"></iconify-icon>
+                </div>
+                <div class="flex-1 min-w-0 pr-20 sm:pr-24">
+                  <h4 class="text-[15px] text-white font-semibold mb-1.5 tracking-tight font-geist">
+                    The Design Voice Lab .skill
+                  </h4>
+                  <p class="text-sm text-neutral-400 leading-relaxed font-normal font-geist">
+                    Crystallize your design thinking into a reusable .skill.
+                    Claude won't write like a generic designer. It will write
+                    like you.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Bonus 5 — Highlighted -->
+              <div class="group relative flex flex-col sm:flex-row sm:items-start gap-5 border rounded-2xl p-6 transition-all duration-300 overflow-hidden bg-orange-500/10 border-orange-500/20 hover:bg-orange-500/15">
+                <div class="absolute -right-12 -bottom-12 w-48 h-48 rounded-full blur-[60px] pointer-events-none bg-orange-600/20"></div>
+                <div class="absolute top-4 right-5 z-10">
+                  <span class="inline-flex items-center rounded-full border px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider border-orange-400/30 bg-orange-400/10 text-orange-400 font-geist">
+                    Worth £197
+                  </span>
+                </div>
+                <div class="flex-shrink-0 w-10 h-10 rounded-xl border flex items-center justify-center bg-orange-500/20 border-orange-500/30 relative z-10">
+                  <iconify-icon icon="solar:users-group-rounded-linear" class="text-lg text-orange-400"></iconify-icon>
+                </div>
+                <div class="flex-1 min-w-0 pr-20 sm:pr-24 relative z-10">
+                  <h4 class="text-[15px] text-white font-semibold mb-1.5 tracking-tight font-geist">
+                    Private Community Access
+                  </h4>
+                  <p class="text-sm text-neutral-400 leading-relaxed font-normal font-geist">
+                    A private community channel for bootcamp members. Share
+                    .skills, get feedback, troubleshoot together. Ongoing access
+                    after the bootcamp ends.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom summary -->
+            <div class="mt-10 flex items-center gap-3">
+              <div class="h-px flex-1 max-w-[60px] bg-white/10"></div>
+              <p class="text-xs text-neutral-500 font-medium uppercase tracking-wider font-geist">
+                All bonuses included with every paid plan · No add-ons
+              </p>
+              <div class="h-px flex-1 max-w-[60px] bg-white/10"></div>
+            </div>
+          </div>
+        </section>
+        <section class="pt-24 pb-24 relative" id="about">
+          <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <!-- Section Label -->
+            <div class="mb-16">
+              <div class="inline-flex items-center rounded-full border border-neutral-200 bg-white/80 backdrop-blur-sm px-3 py-1 text-xs text-neutral-500 shadow-sm font-medium font-geist">
+                Your Instructor
+              </div>
+            </div>
+
+            <!-- Two Column Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+              <!-- Left: Image -->
+              <div class="lg:col-span-4 flex flex-col items-center lg:items-start gap-6">
+                <div class="w-48 h-48 lg:w-56 lg:h-56 rounded-full bg-neutral-100 border border-neutral-200 overflow-hidden flex-shrink-0 shadow-xl">
+                  <div class="flex bg-gradient-to-br from-neutral-100 to-neutral-200 w-full h-full items-center justify-center">
+                    <iconify-icon icon="solar:user-rounded-linear" class="text-6xl text-neutral-400"></iconify-icon>
+                  </div>
+                </div>
+                <div class="text-center lg:text-left">
+                  <p class="uppercase text-xs font-medium text-neutral-400 tracking-widest font-geist text-center mb-2">
+                    Trusted experience at
+                  </p>
+                  <div class="flex flex-wrap gap-2 justify-center lg:justify-start">
+                    <span class="inline-flex items-center rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs text-neutral-600 font-medium shadow-sm font-geist">
+                      Amazon
+                    </span>
+                    <span class="inline-flex items-center rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs text-neutral-600 font-medium shadow-sm font-geist">
+                      Booking.com
+                    </span>
+                    <span class="inline-flex items-center rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs text-neutral-600 font-medium shadow-sm font-geist">
+                      Etisalat
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right: Bio -->
+              <div class="lg:col-span-8 space-y-6">
+                <div class="">
+                  <h2 class="text-5xl md:text-6xl lg:text-7xl text-neutral-900 leading-[1.0] tracking-tighter font-newsreader font-light">
+                    John
+                  </h2>
+                  <p class="text-lg text-orange-500 font-medium mt-2 tracking-tight font-geist">
+                    Senior Product Designer
+                  </p>
+                </div>
+
+                <div class="h-px w-16 bg-orange-500 rounded-full"></div>
+
+                <div class="space-y-4">
+                  <p class="text-[15px] leading-relaxed font-normal text-neutral-500 font-geist">14+ years designing complex products at Amazon, Booking.com, and Etisalat Telecoms. Led the launch of the <span class="text-neutral-700 font-medium font-geist">
+                      Amazon Insurance Store
+                    </span> and the <span class="text-neutral-700 font-medium font-geist">
+                      Global Installment Program
+                    </span> .</p>
+                  <p class="text-[15px] text-neutral-500 leading-relaxed font-normal font-geist">
+                    Built multiple products using Claude Code and AI-assisted
+                    workflows including
+                    <span class="text-neutral-700 font-medium font-geist">
+                      useresumate.com
+                    </span>
+                    ,
+                    <span class="font-medium text-neutral-700 font-geist">ViceCoder</span>
+                    , and
+                    <span class="text-neutral-700 font-medium font-geist">
+                      ProductBrainBox
+                    </span>
+                    .
+                  </p>
+                  <p class="leading-relaxed text-2xl font-light text-neutral-700 tracking-tight font-newsreader">“I’m not an AI researcher. I’m a working designer who figured out how to use AI to do better design work, faster. This bootcamp is everything I wish someone had taught me 12 months ago.”</p>
+                </div>
+
+                <div class="flex flex-wrap gap-4 pt-2">
+                  <div class="flex bg-neutral-50 border-neutral-100 border rounded-xl pt-3 pr-4 pb-3 pl-4 gap-x-2 gap-y-2 items-center">
+                    <iconify-icon icon="solar:buildings-2-linear" class="text-lg text-orange-500" width="18" height="18" style="color: rgb(249, 115, 22)"></iconify-icon>
+                    <div class="">
+                      <p class="text-xs text-neutral-400 font-medium font-geist">
+                        Experience
+                      </p>
+                      <p class="text-sm font-semibold text-neutral-900 tracking-tight font-geist">14+ Years</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2 bg-neutral-50 border border-neutral-100 rounded-xl px-4 py-3">
+                    <iconify-icon icon="solar:rocket-2-linear" class="text-orange-500 text-lg"></iconify-icon>
+                    <div class="">
+                      <p class="text-xs text-neutral-400 font-medium font-geist">
+                        Products Shipped
+                      </p>
+                      <p class="text-sm font-semibold text-neutral-900 tracking-tight font-geist">10 with AI</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2 bg-neutral-50 border border-neutral-100 rounded-xl px-4 py-3">
+                    <iconify-icon icon="solar:users-group-rounded-linear" class="text-orange-500 text-lg"></iconify-icon>
+                    <div class="">
+                      <p class="text-xs text-neutral-400 font-medium font-geist">
+                        Students Taught
+                      </p>
+                      <p class="text-sm text-neutral-900 font-semibold tracking-tight font-geist">
+                        200+
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TESTIMONIALS & GRID -->
+        <section class="overflow-hidden bg-neutral-50 border-neutral-200/60 border-b pt-24 pb-24 relative">
+          <div class="lg:px-8 max-w-[1400px] mr-auto ml-auto pr-6 pl-6">
+            <!-- Header -->
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-20 gap-8">
+              <h2 class="text-4xl md:text-5xl lg:text-6xl text-neutral-900 max-w-4xl leading-[1.05] tracking-tighter font-newsreader font-light">
+                Helping designers
+                <span class="text-neutral-400 tracking-tighter font-newsreader font-light">
+                  break free from the constraints of static tools.
+                </span>
+              </h2>
+              <a href="#" class="group inline-flex items-center text-sm text-neutral-900 transition-colors border-b border-neutral-900 pb-0.5 whitespace-nowrap font-medium hover:text-orange-600 hover:border-orange-600 font-geist">
+                View Alumni Work
+                <iconify-icon icon="solar:arrow-right-up-linear" class="ml-1 text-lg transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></iconify-icon>
+              </a>
+            </div>
+
+            <!-- Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <!-- Card 1: Testimonial -->
+              <div class="bg-white p-8 min-h-[520px] flex flex-col justify-between hover:shadow-[0_20px_40px_rgba(0,0,0,0.04)] transition-shadow duration-500 group rounded-[2rem]">
+                <div class="">
+                  <h3 class="text-xl text-neutral-900 mb-6 leading-snug tracking-tighter font-newsreader font-light">
+                    "I built my MVP in a weekend."
+                  </h3>
+                  <p class="text-neutral-500 leading-relaxed text-[15px] font-normal font-geist">
+                    "Before this bootcamp, I was stuck in Figma files. Ship With
+                    AI gave me the confidence to spin up a Next.js app, hook up
+                    a database, and launch on Vercel."
+                  </p>
+                </div>
+                <div class="flex items-center gap-3 pt-6 border-t border-neutral-100 mt-auto">
+                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&amp;w=200&amp;auto=format&amp;fit=crop" alt="Profile" class="w-10 h-10 rounded-full object-cover bg-neutral-100 grayscale group-hover:grayscale-0 transition-all duration-500">
+                  <div>
+                    <p class="text-sm text-neutral-900 font-medium font-geist">
+                      Elena R.
+                    </p>
+                    <p class="text-xs text-neutral-500 font-geist">
+                      Product Designer @ Stripe
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2: Visual Brand -->
+              <div class="relative min-h-[520px] bg-neutral-900 overflow-hidden group rounded-[2rem]">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&amp;w=1964&amp;auto=format&amp;fit=crop" alt="Abstract" class="group-hover:scale-105 group-hover:opacity-60 transition-all duration-700 opacity-70 w-full h-full object-cover absolute top-0 right-0 bottom-0 left-0 mix-blend-overlay">
+                <div class="bg-gradient-to-t from-black/80 via-transparent absolute top-0 right-0 bottom-0 left-0 to-orange-900/20"></div>
+
+                <div class="absolute top-8 left-8 right-8 flex justify-between items-start z-10">
+                  <span class="text-white text-lg tracking-tight mix-blend-overlay font-medium font-geist">
+                    Ship With AI ©
+                  </span>
+                </div>
+                <div class="absolute bottom-8 right-8 z-10">
+                  <span class="text-white/60 text-xs uppercase tracking-widest font-medium font-geist">
+                    San Francisco
+                  </span>
+                </div>
+              </div>
+
+              <!-- Card 3: Metric -->
+              <div class="min-h-[520px] flex flex-col overflow-hidden group text-center bg-white pt-8 pr-8 pb-8 pl-8 relative items-center justify-between rounded-[2rem]">
+                <p class="text-neutral-500 text-lg mt-8 font-medium font-geist">
+                  Average salary increase
+                  <br>
+                  post-graduation
+                </p>
+
+                <div class="relative flex items-center justify-center w-56 h-56 my-8">
+                  <!-- Progress Circle -->
+                  <svg class="w-full h-full transform -rotate-90 drop-shadow-xl" viewBox="0 0 200 200">
+                    <circle cx="100" cy="100" r="90" stroke="#f3f4f6" stroke-width="1.5" fill="none"></circle>
+                    <circle cx="100" cy="100" r="90" stroke="#6366f1" stroke-width="1.5" fill="none" stroke-dasharray="565" stroke-dashoffset="200" class="transition-all duration-1000 ease-out group-hover:stroke-[3]"></circle>
+                  </svg>
+                  <div class="absolute inset-0 flex items-center justify-center flex-col">
+                    <span class="text-5xl text-neutral-900 tracking-tighter font-newsreader font-light">
+                      +$45k
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 4: Contact -->
+              <div class="min-h-[520px] flex flex-col group overflow-hidden text-white bg-[#08090a] pt-8 pr-8 pb-8 pl-8 relative justify-between rounded-[2rem]">
+                <div class="flex justify-between items-start z-10">
+                  <span class="text-xl tracking-tighter font-newsreader font-light">
+                    Admissions
+                  </span>
+                  <iconify-icon icon="solar:arrow-right-up-linear" class="text-neutral-500 group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300"></iconify-icon>
+                </div>
+
+                <div class="z-10 relative">
+                  <p class="text-neutral-400 leading-relaxed mb-12 max-w-[260px] text-[15px] font-normal font-geist">
+                    Not sure if this is right for you? Book a 15-min chat with a
+                    mentor to review your portfolio and goals.
+                  </p>
+
+                  <div class="space-y-2 text-sm text-neutral-400 font-mono">
+                    <a href="#" class="block transition-colors font-medium hover:text-orange-400 font-geist">
+                      hello@shipwithai.com
+                    </a>
+                    <a href="#" class="block transition-colors font-medium hover:text-orange-400 font-geist">
+                      Join Discord Server
+                    </a>
+                    <a href="#" class="block transition-colors font-medium hover:text-orange-400 font-geist">
+                      Download Brochure
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Hover Glow Effect -->
+                <div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full blur-[80px] transition-all duration-700 pointer-events-none bg-orange-600/20 group-hover:bg-orange-600/30"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- PRICING SECTION -->
+        <section class="lg:p-16 overflow-hidden bg-[#08090a] rounded-[2.5rem] mt-8 pt-8 pr-8 pb-8 pl-8 relative shadow-2xl">
+  <!-- Large Background Text Overlay -->
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 select-none pointer-events-none w-full text-center">
+    <span class="text-[12rem] lg:text-[18rem] text-white/[0.02] leading-none tracking-tighter font-newsreader font-light">
+      JOIN
+    </span>
+  </div>
+
+  <!-- Background glows -->
+  <div class="absolute -left-20 -top-20 w-80 h-80 rounded-full blur-[120px] pointer-events-none bg-orange-600/10"></div>
+  <div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full blur-[120px] pointer-events-none bg-orange-600/8"></div>
+
+  <!-- Header Content -->
+  <div class="relative z-10 flex flex-col items-center text-center max-w-2xl mx-auto mb-12">
+    <span class="inline-flex items-center rounded-full border px-3 py-1 text-xs mb-6 font-medium border-orange-400/30 bg-orange-400/10 text-orange-400 font-geist">
+      Limited Early Bird Pricing
+    </span>
+    <h2 class="text-4xl md:text-5xl text-white mb-4 tracking-tighter font-newsreader font-light">
+      Join the March Bootcamp.
+    </h2>
+    <p class="text-neutral-400 text-sm md:text-base max-w-md mx-auto leading-relaxed font-normal font-geist">
+      One payment. Lifetime access. No subscription.
+    </p>
+  </div>
+
+  <!-- Single Pricing Card -->
+  <div class="relative z-10 max-w-lg mx-auto">
+    <!-- Glow border effect -->
+    <div class="absolute -inset-[1px] rounded-3xl bg-gradient-to-b from-orange-500/40 via-orange-500/10 to-orange-500/30 blur-[2px] pointer-events-none"></div>
+    <div class="absolute -inset-[1px] rounded-3xl bg-gradient-to-b from-orange-500/30 via-orange-500/5 to-orange-500/20 pointer-events-none"></div>
+
+    <div class="relative flex flex-col p-8 md:p-10 bg-[#0d0e10] border border-white/10 rounded-3xl overflow-hidden">
+      <!-- Subtle inner glow -->
+      <div class="absolute -top-20 left-1/2 -translate-x-1/2 w-80 h-40 rounded-full blur-[80px] pointer-events-none bg-orange-600/15"></div>
+      <div class="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t to-transparent pointer-events-none from-orange-600/10"></div>
+
+      <div class="relative z-10">
+        <!-- Pricing -->
+        <div class="text-center mb-8">
+          <div class="flex items-center justify-center gap-3 mb-2">
+            <span class="text-lg text-neutral-500 line-through font-geist">£397</span>
+            <span class="inline-flex items-center rounded-full border px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider border-white/10 bg-white/5 text-neutral-400 font-geist">
+              Full Price
+            </span>
+          </div>
+          <div class="flex items-baseline justify-center gap-2 mb-2">
+            <span class="text-6xl text-white tracking-tighter font-newsreader font-light">£297</span>
+          </div>
+          <span class="inline-flex items-center rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-wider bg-orange-500/15 border-orange-500/30 text-orange-400 font-geist">
+            Early Bird — Limited Time
+          </span>
+        </div>
+
+        <!-- Divider -->
+        <div class="h-px bg-white/10 mb-8"></div>
+
+        <!-- What's included -->
+        <div class="mb-8">
+          <p class="text-xs text-neutral-500 uppercase tracking-wider font-medium mb-5 text-center font-geist">
+            Everything included
+          </p>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3 text-sm text-neutral-300 font-geist">
+              <iconify-icon icon="solar:check-circle-linear" class="text-orange-400 flex-shrink-0"></iconify-icon>
+              6 live sessions (90 min each)
+            </li>
+            <li class="flex items-center gap-3 text-sm text-neutral-300 font-geist">
+              <iconify-icon icon="solar:check-circle-linear" class="text-orange-400 flex-shrink-0"></iconify-icon>
+              Session recordings with lifetime access
+            </li>
+            <li class="flex items-center gap-3 text-sm text-neutral-300 font-geist">
+              <iconify-icon icon="solar:check-circle-linear" class="text-orange-400 flex-shrink-0"></iconify-icon>
+              12 pre-built .skills
+            </li>
+            
+            
+            
+            
+          </ul>
+        </div>
+
+        <!-- CTA Button -->
+        <button class="w-full text-white py-4 rounded-xl text-sm transition-colors flex items-center justify-center gap-2 font-semibold bg-orange-600 hover:bg-orange-500 font-geist" style="box-shadow: rgba(234, 88, 12, 0.3) 0px 0px 30px;">
+          Join the Bootcamp — £297
+          <iconify-icon icon="solar:arrow-right-linear" class="text-base"></iconify-icon>
+        </button>
+
+        <!-- Refund policy -->
+        <p class="text-xs text-neutral-500 text-center mt-5 leading-relaxed font-normal max-w-sm mx-auto font-geist">
+          7-day refund policy. Complete the first week's assignments. Still not for you? Full refund, no questions.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <!-- FAQ SECTION -->
+        <section class="pt-24 pr-4 pb-24 pl-4" id="faq">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center rounded-full border border-neutral-200 bg-white/80 backdrop-blur-sm px-3 py-1 text-xs text-neutral-500 mb-6 shadow-sm font-medium font-geist">
+        FAQ
+      </div>
+      <h2 class="text-4xl md:text-5xl text-neutral-900 tracking-tighter font-newsreader font-light">
+        Common Questions
+      </h2>
+    </div>
+
+    <div class="space-y-3" id="faq-accordion">
+      <!-- Q1 -->
+      <div class="faq-item group border border-neutral-200 rounded-2xl bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left gap-4" onclick="toggleFaq(this)">
+          <span class="text-[15px] text-neutral-900 font-semibold tracking-tight font-geist">
+            Do I need Claude Max ($100/month)?
+          </span>
+          <span class="faq-icon flex-shrink-0 flex items-center justify-center transition-transform duration-300 bg-neutral-100 w-7 h-7 rounded-full">
+            <i data-lucide="chevron-down" class="w-4 h-4 text-neutral-500"></i>
+          </span>
+        </button>
+        <div class="faq-body hidden px-6 pb-5">
+          <p class="text-sm text-neutral-500 leading-relaxed font-geist">
+            No. Claude Cowork works on all paid plans, including the
+            $20/month Pro plan. You'll need at least Pro to follow
+            along.
+          </p>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="faq-item group border border-neutral-200 rounded-2xl bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left gap-4" onclick="toggleFaq(this)">
+          <span class="text-[15px] text-neutral-900 font-semibold tracking-tight font-geist">
+            Do I need to know how to code?
+          </span>
+          <span class="faq-icon flex-shrink-0 w-7 h-7 rounded-full bg-neutral-100 flex items-center justify-center transition-transform duration-300">
+            <i data-lucide="chevron-down" class="w-4 h-4 text-neutral-500"></i>
+          </span>
+        </button>
+        <div class="faq-body hidden px-6 pb-5">
+          <p class="text-sm text-neutral-500 leading-relaxed font-geist">
+            No. Sessions 1–4 and Session 6 are completely no-code.
+            Session 5 introduces Claude Code, but we walk you through
+            everything step by step. You don't need to write or
+            understand code.
+          </p>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="faq-item group border border-neutral-200 rounded-2xl bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left gap-4" onclick="toggleFaq(this)">
+          <span class="text-[15px] text-neutral-900 font-semibold tracking-tight font-geist">
+            Does this work on Windows?
+          </span>
+          <span class="faq-icon flex-shrink-0 w-7 h-7 rounded-full bg-neutral-100 flex items-center justify-center transition-transform duration-300">
+            <i data-lucide="chevron-down" class="w-4 h-4 text-neutral-500"></i>
+          </span>
+        </button>
+        <div class="faq-body hidden px-6 pb-5">
+          <p class="text-sm text-neutral-500 leading-relaxed font-geist">
+            Yes. Claude Cowork is available on both Mac and Windows
+            desktop apps. You'll need a laptop or desktop.
+          </p>
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="faq-item group border border-neutral-200 rounded-2xl bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left gap-4" onclick="toggleFaq(this)">
+          <span class="text-[15px] text-neutral-900 font-semibold tracking-tight font-geist">
+            I already use AI. Will I learn anything new?
+          </span>
+          <span class="faq-icon flex-shrink-0 w-7 h-7 rounded-full bg-neutral-100 flex items-center justify-center transition-transform duration-300">
+            <i data-lucide="chevron-down" class="w-4 h-4 text-neutral-500"></i>
+          </span>
+        </button>
+        <div class="faq-body hidden px-6 pb-5">
+          <p class="text-sm text-neutral-500 leading-relaxed font-geist">
+            If you're copy-pasting prompts into a chat window, yes. This
+            bootcamp teaches you to build reusable, persistent workflows
+            that improve over time. That's a different skill entirely.
+          </p>
+        </div>
+      </div>
+
+      <!-- Q5 -->
+      <div class="faq-item group border border-neutral-200 rounded-2xl bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left gap-4" onclick="toggleFaq(this)">
+          <span class="text-[15px] text-neutral-900 font-semibold tracking-tight font-geist">
+            Is this live or self-paced?
+          </span>
+          <span class="faq-icon flex-shrink-0 w-7 h-7 rounded-full bg-neutral-100 flex items-center justify-center transition-transform duration-300">
+            <i data-lucide="chevron-down" class="w-4 h-4 text-neutral-500"></i>
+          </span>
+        </button>
+        <div class="faq-body hidden px-6 pb-5">
+          <p class="text-sm text-neutral-500 leading-relaxed font-geist">
+            Both. 6 live sessions over 2 weeks plus recordings with
+            lifetime access.
+          </p>
+        </div>
+      </div>
+
+      <!-- Q6 -->
+      <div class="faq-item group border border-neutral-200 rounded-2xl bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left gap-4" onclick="toggleFaq(this)">
+          <span class="text-[15px] text-neutral-900 font-semibold tracking-tight font-geist">
+            What if I miss a live session?
+          </span>
+          <span class="faq-icon flex-shrink-0 w-7 h-7 rounded-full bg-neutral-100 flex items-center justify-center transition-transform duration-300">
+            <i data-lucide="chevron-down" class="w-4 h-4 text-neutral-500"></i>
+          </span>
+        </button>
+        <div class="faq-body hidden px-6 pb-5">
+          <p class="text-sm text-neutral-500 leading-relaxed font-geist">
+            Every session is recorded and uploaded within 24 hours.
+            Lifetime access to all recordings.
+          </p>
+        </div>
+      </div>
+
+      <!-- Q7 -->
+      <div class="faq-item group border border-neutral-200 rounded-2xl bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left gap-4" onclick="toggleFaq(this)">
+          <span class="text-[15px] text-neutral-900 font-semibold tracking-tight font-geist">
+            What tools do I need?
+          </span>
+          <span class="faq-icon flex-shrink-0 w-7 h-7 rounded-full bg-neutral-100 flex items-center justify-center transition-transform duration-300">
+            <i data-lucide="chevron-down" class="w-4 h-4 text-neutral-500"></i>
+          </span>
+        </button>
+        <div class="faq-body hidden px-6 pb-5">
+          <p class="text-sm text-neutral-500 leading-relaxed font-geist">
+            Claude Pro or Max subscription ($20–200/month), Claude
+            Desktop app (free), Figma account (free tier works), and a
+            laptop running macOS 11+ or Windows 10+.
+          </p>
+        </div>
+      </div>
+
+      <!-- Q8 -->
+      <div class="faq-item group border border-neutral-200 rounded-2xl bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left gap-4" onclick="toggleFaq(this)">
+          <span class="text-[15px] text-neutral-900 font-semibold tracking-tight font-geist">
+            Can my company pay for this?
+          </span>
+          <span class="faq-icon flex-shrink-0 w-7 h-7 rounded-full bg-neutral-100 flex items-center justify-center transition-transform duration-300">
+            <i data-lucide="chevron-down" class="w-4 h--4 text-neutral-500"></i>
+          </span>
+        </button>
+        <div class="faq-body hidden px-6 pb-5">
+          <p class="text-sm text-neutral-500 leading-relaxed font-geist">
+            Yes. We provide invoices for expense reports. Many companies
+            cover this under L&amp;D budgets.
+          </p>
+        </div>
+      </div>
+
+      <!-- Q9 -->
+      <div class="faq-item group border border-neutral-200 rounded-2xl bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left gap-4" onclick="toggleFaq(this)">
+          <span class="text-[15px] text-neutral-900 font-semibold tracking-tight font-geist">
+            Do you have a refund policy?
+          </span>
+          <span class="faq-icon flex-shrink-0 w-7 h-7 rounded-full bg-neutral-100 flex items-center justify-center transition-transform duration-300">
+            <i data-lucide="chevron-down" class="w-4 h-4 text-neutral-500"></i>
+          </span>
+        </button>
+        <div class="faq-body hidden px-6 pb-5">
+          <p class="text-sm text-neutral-500 leading-relaxed font-geist">
+            Yes. Complete the first week's assignments. Still not for
+            you? Email within 7 days of the start date for a full
+            refund. No questions asked.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleFaq(trigger) {
+      const item = trigger.closest('.faq-item');
+      const body = item.querySelector('.faq-body');
+      const icon = item.querySelector('.faq-icon');
+      const isOpen = !body.classList.contains('hidden');
+
+      // Close all
+      document.querySelectorAll('.faq-item').forEach(function(el) {
+        el.querySelector('.faq-body').classList.add('hidden');
+        el.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+        el.querySelector('.faq-icon').classList.remove('bg-orange-500/10');
+        el.querySelector('.faq-icon').classList.add('bg-neutral-100');
+      });
+
+      if (!isOpen) {
+        body.classList.remove('hidden');
+        icon.style.transform = 'rotate(180deg)';
+        icon.classList.remove('bg-neutral-100');
+        icon.classList.add('bg-orange-500/10');
+      }
+    }
+
+    (function() {
+      if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+      }
+    })();
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</section>
+
+        <!-- FOOTER REDESIGN -->
+        <footer class="mt-8 w-full bg-[#050505] rounded-[2.5rem] overflow-hidden relative shadow-2xl border border-white/5">
+          <!-- Purple glow background effect -->
+          <div class="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full blur-[120px] pointer-events-none -translate-x-1/3 translate-y-1/3 bg-orange-600/10"></div>
+
+          <!-- CTA Section -->
+          <div class="pt-24 pb-16 px-8 text-center relative z-10">
+            <!-- Icon -->
+            <div class="mx-auto w-20 h-20 rounded-2xl flex items-center justify-center mb-8 border shadow-[0_0_40px_rgba(99,102,241,0.15)] backdrop-blur-sm bg-orange-900/20 border-orange-500/20">
+              <div class="w-12 h-12 rounded-lg flex items-center justify-center border bg-orange-500/10 border-orange-500/30">
+                <iconify-icon icon="solar:rocket-2-linear" class="text-2xl drop-shadow-[0_0_8px_rgba(99,102,241,0.5)] text-orange-400"></iconify-icon>
+              </div>
+            </div>
+
+            <h2 class="text-4xl md:text-5xl lg:text-6xl text-white mb-6 tracking-tighter font-newsreader font-light">
+              Ready to ship your ideas?
+            </h2>
+            <p class="text-neutral-400 text-lg mb-10 max-w-lg mx-auto leading-relaxed font-normal font-geist">
+              Join the next generation of product designers who build what they
+              design.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <button class="px-8 py-3 rounded-full bg-gradient-to-b text-white hover:brightness-110 transition-all shadow-[0_0_25px_rgba(99,102,241,0.2)] flex items-center gap-2 border font-medium from-orange-500 to-orange-700 border-orange-400/20 font-geist">
+                Apply for Cohort IV
+                <iconify-icon icon="solar:arrow-right-linear" class="text-lg"></iconify-icon>
+              </button>
+              <button class="px-8 py-3 rounded-full bg-white/5 border border-white/10 text-white hover:bg-white/10 transition-all font-medium font-geist">
+                Download Syllabus
+              </button>
+            </div>
+          </div>
+
+          <!-- Divider -->
+          <div class="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent w-full my-8 opacity-50"></div>
+
+          <!-- Links Section -->
+          <div class="px-8 md:px-16 pb-16 grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10">
+            <!-- Brand Column -->
+            <div class="lg:col-span-5 space-y-6">
+              <h3 class="text-3xl text-white tracking-tighter font-newsreader font-light">
+                ShipWithAI
+                <span class="tracking-tighter font-newsreader font-light text-orange-500">
+                  .
+                </span>
+              </h3>
+              <p class="text-neutral-500 text-sm leading-relaxed max-w-sm font-normal font-geist">
+                The only bootcamp bridging the gap between product design and
+                engineering with AI.
+              </p>
+              <div class="flex gap-4 pt-2">
+                <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors text-neutral-400 hover:text-white border border-white/5">
+                  <iconify-icon icon="solar:camera-linear" class="text-lg"></iconify-icon>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors text-neutral-400 hover:text-white border border-white/5">
+                  <iconify-icon icon="solar:earth-linear" class="text-lg"></iconify-icon>
+                </a>
+              </div>
+            </div>
+
+            <!-- Links Columns -->
+            <div class="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8 lg:pl-12">
+              <!-- Col 1 -->
+              <div class="space-y-6">
+                <h4 class="text-white font-semibold font-geist">Course</h4>
+                <ul class="space-y-3 text-sm text-neutral-500">
+                  <li>
+                    <a href="#" class="transition-colors hover:text-orange-400 font-geist">
+                      Curriculum
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="transition-colors hover:text-orange-400 font-geist">
+                      Mentors
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="transition-colors hover:text-orange-400 font-geist">
+                      Showcase
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- Col 2 -->
+              <div class="space-y-6">
+                <h4 class="text-white font-semibold font-geist">Resources</h4>
+                <ul class="space-y-3 text-sm text-neutral-500">
+                  <li>
+                    <a href="#" class="transition-colors hover:text-orange-400 font-geist">
+                      Blog
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="transition-colors hover:text-orange-400 font-geist">
+                      Prompt Library
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="transition-colors hover:text-orange-400 font-geist">
+                      Community
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- Col 3 -->
+              <div class="space-y-6 hidden sm:block">
+                <h4 class="text-white font-semibold font-geist">Company</h4>
+                <ul class="space-y-3 text-sm text-neutral-500">
+                  <li>
+                    <a href="#" class="transition-colors hover:text-orange-400 font-geist">
+                      About
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="transition-colors hover:text-orange-400 font-geist">
+                      Contact
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="transition-colors hover:text-orange-400 font-geist">
+                      Terms
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </main>
+    </div>
+  
+</body></html>

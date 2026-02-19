@@ -1,0 +1,362 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Cohort IV - Ship With AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    
+    
+
+    <style>
+      body { font-family: 'Inter', sans-serif; }
+      .font-manrope { font-family: 'Manrope', sans-serif; }
+      .font-newsreader { font-family: 'Newsreader', serif; }
+      
+      /* Custom Radio/Checkbox Styles */
+      .custom-radio:checked + div {
+        border-color: #f97316;
+        background-color: #fff7ed;
+      }
+      .custom-radio:checked + div .radio-circle {
+        border-color: #f97316;
+        border-width: 5px;
+      }
+    </style>
+  </head>
+  <body class="antialiased selection:bg-orange-500 selection:text-white text-gray-900 bg-gray-50">
+    <div class="mx-auto max-w-7xl border-l border-r border-dashed border-neutral-300 min-h-screen relative bg-white/50">
+      
+      <!-- Vertical Grid Lines Background -->
+      <div class="absolute inset-0 pointer-events-none flex justify-between px-4 opacity-20 z-0">
+        <div class="w-px h-full bg-neutral-300"></div>
+        <div class="w-px h-full bg-neutral-300"></div>
+        <div class="w-px h-full bg-neutral-300"></div>
+      </div>
+
+      <main class="z-10 md:p-6 lg:p-8 pt-4 pr-4 pb-4 pl-4 relative space-y-6">
+        <!-- Navigation -->
+        <nav class="flex items-center justify-between mb-8 relative z-20">
+          <a href="#" class="flex items-center gap-2 font-semibold tracking-tight text-neutral-900 bg-white px-4 py-2 rounded-full border border-neutral-200 shadow-sm hover:border-orange-200 transition-colors">
+            <iconify-icon icon="solar:ufo-3-outline" class="text-lg text-orange-500"></iconify-icon>
+            ShipWithAI
+          </a>
+          <a href="#" class="text-xs font-medium text-neutral-500 hover:text-neutral-900 flex items-center gap-1 bg-white px-4 py-2 rounded-full border border-neutral-200 transition-colors">
+            <iconify-icon icon="solar:arrow-left-linear" class="text-sm"></iconify-icon>
+            Back to Home
+          </a>
+        </nav>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <div class="lg:col-span-8 space-y-6">
+            <!-- Hero Section -->
+            <section class="lg:p-12 p-8 overflow-hidden bg-white border-neutral-200 border rounded-[2.5rem] relative shadow-sm">
+              <div class="absolute top-0 right-0 p-12 opacity-5">
+                <iconify-icon icon="solar:file-send-linear" class="text-9xl"></iconify-icon>
+              </div>
+              <div class="relative z-10">
+                <div class="inline-flex text-xs font-medium text-orange-600 bg-orange-50 border-orange-200 border rounded-full mb-6 pt-1 pr-3 pb-1 pl-3 items-center">COHORT I - 20 SPOTS ONLY</div>
+                <h1 class="md:text-5xl lg:text-6xl text-4xl font-light text-neutral-900 tracking-tighter font-newsreader mb-4">
+                  Let's get you <span class="text-orange-500">shipping.</span>
+                </h1>
+                <p class="text-lg font-normal text-neutral-500 max-w-xl">
+                  Cohort IV is a small group of 20 product designers and PMs building real AI workflows. 
+                  We review every application to ensure high-quality peer learning.
+                </p>
+                <div class="grid grid-cols-3 gap-3 mt-8 max-w-md">
+                  <div class="bg-neutral-900 rounded-2xl p-4">
+                    <div class="text-2xl font-light text-white font-newsreader">20</div>
+                    <div class="text-[0.65rem] font-medium text-neutral-400 uppercase tracking-widest">Spots</div>
+                  </div>
+                  <div class="bg-neutral-900 rounded-2xl p-4">
+                    <div class="text-2xl font-light text-white font-newsreader">6</div>
+                    <div class="text-[0.65rem] font-medium text-neutral-400 uppercase tracking-widest">Sessions</div>
+                  </div>
+                  <div class="bg-neutral-900 rounded-2xl p-4">
+                    <div class="text-2xl font-light text-white font-newsreader">2</div>
+                    <div class="text-[0.65rem] font-medium text-neutral-400 uppercase tracking-widest">Weeks</div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <form class="space-y-6">
+              <!-- Section: Personal Details -->
+              <div class="lg:p-10 bg-white border-neutral-200 border rounded-[2.5rem] pt-8 pr-8 pb-8 pl-8 shadow-sm">
+                <div class="mb-8">
+                  <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-100 text-orange-600 text-[0.65rem] font-semibold uppercase tracking-wider mb-4">
+                    Step 01
+                  </div>
+                  <h2 class="text-3xl font-semibold font-newsreader text-neutral-900 mb-2 tracking-tight">Personal Details</h2>
+                  <p class="text-neutral-500 text-sm">How can we reach you and see your work?</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div class="space-y-1.5">
+                    <label class="text-sm font-semibold text-neutral-900 block">Full Name</label>
+                    <input type="text" placeholder="e.g. Jordan Smith" class="w-full rounded-xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm focus:border-orange-500 focus:ring-1 focus:ring-orange-500 outline-none transition-all">
+                  </div>
+                  <div class="space-y-1.5">
+                    <label class="text-sm font-semibold text-neutral-900 block">Email Address</label>
+                    <input type="email" placeholder="name@company.com" class="w-full rounded-xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm focus:border-orange-500 focus:ring-1 focus:ring-orange-500 outline-none transition-all">
+                  </div>
+                  <div class="md:col-span-2 space-y-1.5">
+                    <label class="text-sm font-semibold text-neutral-900 block">LinkedIn / Portfolio URL</label>
+                    <input type="url" placeholder="linkedin.com/in/jordan..." class="w-full rounded-xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm focus:border-orange-500 focus:ring-1 focus:ring-orange-500 outline-none transition-all">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Section: Professional Role -->
+              <div class="lg:p-10 p-8 bg-white border-neutral-200 border rounded-[2.5rem] shadow-sm">
+                <div class="mb-8">
+                  <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-100 text-orange-600 text-[0.65rem] font-semibold uppercase tracking-wider mb-4">
+                    Step 02
+                  </div>
+                  <h2 class="text-3xl font-semibold font-newsreader text-neutral-900 mb-2 tracking-tight">Your Role</h2>
+                  <p class="text-neutral-500 text-sm">Select the title that best describes you.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                  <!-- Role Item -->
+                  <label class="cursor-pointer group">
+                    <input type="radio" name="role" class="peer sr-only custom-radio">
+                    <div class="border border-neutral-200 rounded-2xl p-4 hover:border-orange-300 transition-all bg-neutral-50 flex flex-col gap-3 h-full">
+                      <div class="flex justify-between items-start">
+                        <iconify-icon icon="solar:pen-new-square-linear" class="text-xl text-neutral-400"></iconify-icon>
+                        <div class="w-4 h-4 rounded-full border border-neutral-300 radio-circle"></div>
+                      </div>
+                      <span class="text-sm font-medium text-neutral-900">Product Designer</span>
+                    </div>
+                  </label>
+                  <label class="cursor-pointer group">
+                    <input type="radio" name="role" class="peer sr-only custom-radio">
+                    <div class="border border-neutral-200 rounded-2xl p-4 hover:border-orange-300 transition-all bg-neutral-50 flex flex-col gap-3 h-full">
+                      <div class="flex justify-between items-start">
+                        <iconify-icon icon="solar:crown-star-linear" class="text-xl text-neutral-400"></iconify-icon>
+                        <div class="w-4 h-4 rounded-full border border-neutral-300 radio-circle"></div>
+                      </div>
+                      <span class="text-sm font-medium text-neutral-900">Senior Designer</span>
+                    </div>
+                  </label>
+                  <label class="cursor-pointer group">
+                    <input type="radio" name="role" class="peer sr-only custom-radio">
+                    <div class="border border-neutral-200 rounded-2xl p-4 hover:border-orange-300 transition-all bg-neutral-50 flex flex-col gap-3 h-full">
+                      <div class="flex justify-between items-start">
+                        <iconify-icon icon="solar:case-minimalistic-linear" class="text-xl text-neutral-400"></iconify-icon>
+                        <div class="w-4 h-4 rounded-full border border-neutral-300 radio-circle"></div>
+                      </div>
+                      <span class="text-sm font-medium text-neutral-900">Product Manager</span>
+                    </div>
+                  </label>
+                  <label class="cursor-pointer group">
+                    <input type="radio" name="role" class="peer sr-only custom-radio">
+                    <div class="border border-neutral-200 rounded-2xl p-4 hover:border-orange-300 transition-all bg-neutral-50 flex flex-col gap-3 h-full">
+                      <div class="flex justify-between items-start">
+                        <iconify-icon icon="solar:users-group-rounded-linear" class="text-xl text-neutral-400"></iconify-icon>
+                        <div class="w-4 h-4 rounded-full border border-neutral-300 radio-circle"></div>
+                      </div>
+                      <span class="text-sm font-medium text-neutral-900">Design Manager</span>
+                    </div>
+                  </label>
+                  <label class="cursor-pointer group">
+                    <input type="radio" name="role" class="peer sr-only custom-radio">
+                    <div class="border border-neutral-200 rounded-2xl p-4 hover:border-orange-300 transition-all bg-neutral-50 flex flex-col gap-3 h-full">
+                      <div class="flex justify-between items-start">
+                        <iconify-icon icon="solar:laptop-minimalistic-linear" class="text-xl text-neutral-400"></iconify-icon>
+                        <div class="w-4 h-4 rounded-full border border-neutral-300 radio-circle"></div>
+                      </div>
+                      <span class="text-sm font-medium text-neutral-900">Freelancer</span>
+                    </div>
+                  </label>
+                  <label class="cursor-pointer group">
+                    <input type="radio" name="role" class="peer sr-only custom-radio">
+                    <div class="border border-neutral-200 rounded-2xl p-4 hover:border-orange-300 transition-all bg-neutral-50 flex flex-col gap-3 h-full">
+                      <div class="flex justify-between items-start">
+                        <iconify-icon icon="solar:asteroid-linear" class="text-xl text-neutral-400"></iconify-icon>
+                        <div class="w-4 h-4 rounded-full border border-neutral-300 radio-circle"></div>
+                      </div>
+                      <span class="text-sm font-medium text-neutral-900">Other</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Section: AI Experience -->
+              <div class="lg:p-10 p-8 bg-white border-neutral-200 border rounded-[2.5rem] shadow-sm">
+                <div class="mb-8">
+                  <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-100 text-orange-600 text-[0.65rem] font-semibold uppercase tracking-wider mb-4">
+                    Step 03
+                  </div>
+                  <h2 class="text-3xl font-semibold font-newsreader text-neutral-900 mb-2 tracking-tight">Your AI Journey</h2>
+                  <p class="text-neutral-500 text-sm">Tell us about your current relationship with AI tools.</p>
+                </div>
+                <div class="space-y-6">
+                  <div class="space-y-1.5">
+                    <label class="text-sm font-semibold text-neutral-900 block">Current Experience Level</label>
+                    <div class="relative">
+                      <select class="w-full rounded-xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm appearance-none cursor-pointer focus:border-orange-500 focus:ring-1 focus:ring-orange-500 outline-none">
+                        <option>Complete beginner</option>
+                        <option>Occasional ChatGPT user</option>
+                        <option>Regular AI user (Midjourney, Claude)</option>
+                        <option>Power user (Custom agents, Cursor)</option>
+                      </select>
+                      <iconify-icon icon="solar:alt-arrow-down-linear" class="absolute right-4 top-3.5 text-neutral-400"></iconify-icon>
+                    </div>
+                  </div>
+                  <div class="space-y-1.5">
+                    <label class="text-sm font-semibold text-neutral-900 block">What do you want to achieve?</label>
+                    <textarea rows="4" placeholder="I want to stop doing busywork and start shipping..." class="w-full rounded-xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm resize-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 outline-none"></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Section: Commitment -->
+              <div class="lg:p-10 p-8 bg-white border-neutral-200 border rounded-[2.5rem] shadow-sm">
+                <div class="mb-8">
+                  <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-100 text-orange-600 text-[0.65rem] font-semibold uppercase tracking-wider mb-4">
+                    Step 04
+                  </div>
+                  <h2 class="text-3xl font-semibold font-newsreader text-neutral-900 mb-2 tracking-tight">The Commitment</h2>
+                  <p class="text-neutral-500 text-sm">Sessions run Mon/Wed/Fri, March 17–28.</p>
+                </div>
+                <div class="space-y-6">
+                  <div class="space-y-3">
+                    <label class="flex items-start gap-3 cursor-pointer group">
+                      <div class="relative flex items-center mt-0.5">
+                        <input type="checkbox" class="peer sr-only">
+                        <div class="w-5 h-5 border border-neutral-300 rounded peer-checked:bg-orange-500 peer-checked:border-orange-500 transition-all bg-white"></div>
+                        <iconify-icon icon="solar:check-read-linear" class="absolute inset-0 text-white opacity-0 peer-checked:opacity-100 transition-opacity text-xs flex items-center justify-center"></iconify-icon>
+                      </div>
+                      <span class="text-sm text-neutral-600 select-none group-hover:text-neutral-900">
+                        I can commit to 3–5 hours per week for 2 weeks.
+                      </span>
+                    </label>
+                    <label class="flex items-start gap-3 cursor-pointer group">
+                      <div class="relative flex items-center mt-0.5">
+                        <input type="checkbox" class="peer sr-only">
+                        <div class="w-5 h-5 border border-neutral-300 rounded peer-checked:bg-orange-500 peer-checked:border-orange-500 transition-all bg-white"></div>
+                        <iconify-icon icon="solar:check-read-linear" class="absolute inset-0 text-white opacity-0 peer-checked:opacity-100 transition-opacity text-xs flex items-center justify-center"></iconify-icon>
+                      </div>
+                      <span class="text-sm text-neutral-600 select-none group-hover:text-neutral-900">
+                        I have access to a laptop and can install Claude Desktop.
+                      </span>
+                    </label>
+                  </div>
+
+                  <!-- Final CTA -->
+                  <div class="pt-8 border-t border-neutral-100">
+                    <div class="bg-neutral-900 rounded-2xl p-6 mb-8">
+                      <h3 class="text-sm font-semibold text-white mb-2">Pricing Acknowledgment</h3>
+                      <p class="text-sm text-neutral-400">
+                        Accepted applicants receive a payment link for £297 (Early Bird). No payment is taken today.
+                      </p>
+                    </div>
+                    <button type="submit" class="w-full bg-orange-600 hover:bg-orange-500 text-white py-4 px-10 rounded-2xl text-sm font-semibold tracking-tight shadow-xl shadow-orange-500/20 transition-all transform active:scale-[0.99] flex items-center justify-center gap-2">
+                      Submit My Application
+                      <iconify-icon icon="solar:arrow-right-linear" class="text-lg"></iconify-icon>
+                    </button>
+                    <p class="text-center text-[0.65rem] text-neutral-400 uppercase tracking-widest mt-6">
+                      Review time: ~48 hours
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+            <!-- FAQ Section -->
+            <section class="lg:p-10 p-8 bg-white border-neutral-200 border rounded-[2.5rem] shadow-sm space-y-6">
+              <h3 class="text-2xl font-newsreader font-light tracking-tight text-neutral-900">Frequently Asked Questions</h3>
+              <div class="space-y-3">
+                <details class="group bg-neutral-50 rounded-2xl p-5 border border-neutral-100">
+                  <summary class="list-none cursor-pointer flex items-center justify-between font-semibold text-sm">
+                    Is there a fee to apply?
+                    <iconify-icon icon="solar:alt-arrow-down-linear" class="group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="mt-3 text-sm text-neutral-500">No. The application is free. You only pay if you are accepted.</p>
+                </details>
+                <details class="group bg-neutral-50 rounded-2xl p-5 border border-neutral-100">
+                  <summary class="list-none cursor-pointer flex items-center justify-between font-semibold text-sm">
+                    When will I find out if I'm in?
+                    <iconify-icon icon="solar:alt-arrow-down-linear" class="group-open:rotate-180 transition-transform"></iconify-icon>
+                  </summary>
+                  <p class="mt-3 text-sm text-neutral-500">We review applications on a rolling basis. You'll hear from us within 48 hours.</p>
+                </details>
+              </div>
+            </section>
+          </div>
+
+          <!-- Right Sidebar -->
+          <div class="lg:col-span-4 space-y-6 lg:sticky lg:top-8">
+            <div class="bg-[#08090a] rounded-[2.5rem] p-8 text-white relative overflow-hidden shadow-2xl">
+              <div class="absolute -right-20 -top-20 w-60 h-60 rounded-full blur-[80px] pointer-events-none bg-orange-600/20"></div>
+              <div class="relative z-10 space-y-8">
+                <h3 class="text-2xl font-newsreader font-light tracking-tight">Program Overview</h3>
+                <div class="space-y-6">
+                  <div class="flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
+                      <iconify-icon icon="solar:calendar-date-linear" class="text-orange-400"></iconify-icon>
+                    </div>
+                    <div class="">
+                      <p class="text-[0.65rem] text-neutral-400 uppercase font-semibold">Timeline</p>
+                      <p class="text-sm font-medium">March 17 – 28, 2026</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
+                      <iconify-icon icon="solar:clock-circle-linear" class="text-orange-400"></iconify-icon>
+                    </div>
+                    <div class="">
+                      <p class="text-[0.65rem] text-neutral-400 uppercase font-semibold">Commitment</p>
+                      <p class="text-sm font-medium">4 hours / week</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
+                      <iconify-icon icon="solar:tag-price-linear" class="text-orange-400"></iconify-icon>
+                    </div>
+                    <div class="">
+                      <p class="text-[0.65rem] text-neutral-400 uppercase font-semibold">Investment</p>
+                      <div class="flex items-center gap-2">
+                        <span class="text-sm font-medium">£297</span>
+                        <span class="text-[0.65rem] bg-orange-500/20 text-orange-400 px-1.5 py-0.5 rounded border border-orange-500/30">Early Bird</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="h-px bg-white/10"></div>
+                <div class="flex items-center gap-3">
+                  <div class="flex -space-x-2">
+                    <div class="w-8 h-8 rounded-full border-2 border-[#08090a] bg-neutral-800"></div>
+                    <div class="w-8 h-8 rounded-full border-2 border-[#08090a] bg-neutral-700"></div>
+                    <div class="w-8 h-8 rounded-full border-2 border-[#08090a] bg-orange-500 flex items-center justify-center text-[10px] font-bold">+12</div>
+                  </div>
+                  <p class="text-xs text-neutral-400">Be one of the first 20</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-3xl p-6 border border-neutral-200 shadow-sm flex items-center gap-4">
+              <iconify-icon icon="solar:shield-check-linear" class="text-3xl text-orange-500"></iconify-icon>
+              <div class="">
+                <h4 class="text-sm font-semibold text-neutral-900">Money Back Guarantee</h4>
+                <p class="text-xs text-neutral-500 mt-0.5">Full refund if not satisfied after week one.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="mt-14 border-t border-neutral-200 bg-[#08090a] py-12 px-8">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+          <div class="flex items-center gap-2 font-semibold text-white">
+            <iconify-icon icon="solar:ufo-3-outline" class="text-lg text-orange-500"></iconify-icon>
+            ShipWithAI
+          </div>
+          <p class="text-xs text-neutral-500">© 2026 ShipWithAI. Built for builders.</p>
+        </div>
+      </footer>
+    </div>
+  
+</body></html>
