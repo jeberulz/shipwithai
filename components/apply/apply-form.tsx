@@ -9,6 +9,12 @@ import {
   claudeExperienceOptions,
   attendanceOptions,
 } from "@/lib/apply-data";
+import {
+  trackMetaEvent,
+  generateEventId,
+  setMetaAdvancedMatching,
+  getMetaCookies,
+} from "@/lib/meta-pixel-client";
 import type { RadioCardOption } from "@/types/apply";
 
 function SectionDivider({ label }: { label: string }) {
@@ -77,7 +83,13 @@ function RadioCardGroup({
 const inputClassName =
   "w-full rounded-xl border border-neutral-200 bg-neutral-50 px-4 py-3 text-sm text-neutral-900 placeholder:text-neutral-400 focus:border-orange-500 focus:ring-1 focus:ring-orange-500 focus:outline-none transition-colors font-geist";
 
-export function ApplyForm() {
+export function ApplyForm({
+  cohortSlug,
+  cohortName,
+}: {
+  cohortSlug: string;
+  cohortName: string;
+}) {
   // About You
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -95,8 +107,94 @@ export function ApplyForm() {
   const [bootcampGoals, setBootcampGoals] = useState("");
   const [anythingElse, setAnythingElse] = useState("");
 
-  function handleSubmit(e: React.FormEvent) {
+  // Submission state
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState("");
+
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitError("");
+
+    const leadEventId = generateEventId();
+    const completeRegEventId = generateEventId();
+    const { fbp, fbc } = getMetaCookies();
+
+    try {
+      const response = await fetch("/api/apply", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fullName,
+          email,
+          linkedinUrl,
+          selectedRole,
+          company,
+          yearsOfExperience,
+          aiUsage,
+          claudeExperience,
+          attendance,
+          bootcampGoals,
+          anythingElse,
+          cohortSlug,
+          _meta: { leadEventId, completeRegEventId, fbp, fbc },
+        }),
+      });
+
+      if (!response.ok) {
+        const data = await response.json();
+        throw new Error(data.error || "Something went wrong");
+      }
+
+      setIsSubmitted(true);
+
+      trackMetaEvent(
+        "Lead",
+        { content_name: "Bootcamp Application", content_category: "application" },
+        leadEventId
+      );
+      trackMetaEvent(
+        "CompleteRegistration",
+        { content_name: cohortName, status: true },
+        completeRegEventId
+      );
+    } catch (err) {
+      setSubmitError(
+        err instanceof Error ? err.message : "Something went wrong"
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
+  if (isSubmitted) {
+    return (
+      <section>
+        <div className="bg-white border border-neutral-100 rounded-[2rem] p-8 lg:p-10 shadow-sm text-center">
+          <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-green-50 border border-green-200 flex items-center justify-center">
+            <SolarIcon
+              icon="solar:check-circle-bold"
+              className="text-green-600"
+              width={32}
+              height={32}
+            />
+          </div>
+          <h2 className="text-3xl font-light text-neutral-900 tracking-tight font-newsreader mb-3">
+            Application Submitted!
+          </h2>
+          <p className="text-sm text-neutral-500 font-geist max-w-md mx-auto mb-6">
+            Thanks, {fullName.split(" ")[0]}! We&apos;ll review your application within 48 hours and send next steps to{" "}
+            <span className="font-medium text-neutral-700">{email}</span>.
+          </p>
+          <div className="bg-orange-50 border border-orange-100 rounded-xl p-4 max-w-sm mx-auto">
+            <p className="text-xs text-orange-700 font-geist font-medium">
+              Check your inbox (and spam folder) for a confirmation email.
+            </p>
+          </div>
+        </div>
+      </section>
+    );
   }
 
   return (
@@ -146,6 +244,11 @@ export function ApplyForm() {
                   placeholder="you@company.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  onBlur={() => {
+                    if (email) {
+                      setMetaAdvancedMatching({ em: email.toLowerCase().trim() });
+                    }
+                  }}
                   className={inputClassName}
                 />
               </div>
@@ -368,7 +471,7 @@ export function ApplyForm() {
           <div className="bg-[#08090a] rounded-2xl p-6 mb-8">
             <div className="h-1 w-12 bg-orange-500 rounded-full mb-4" />
             <h3 className="text-sm font-semibold text-white mb-2 font-geist">
-              Pricing for Cohort 1
+              Pricing for {cohortName}
             </h3>
             <p className="text-sm text-neutral-400 font-geist leading-relaxed">
               Early bird: &pound;297 (first 48 hours after acceptance). Full
@@ -380,18 +483,37 @@ export function ApplyForm() {
             </p>
           </div>
 
+          {/* Error display */}
+          {submitError && (
+            <div className="bg-red-50 border border-red-200 rounded-xl p-4 mb-6">
+              <p className="text-sm text-red-700 font-geist font-medium">
+                {submitError}
+              </p>
+            </div>
+          )}
+
           {/* Submit */}
           <button
             type="submit"
-            className="w-full sm:w-auto sm:mx-auto sm:flex bg-orange-600 hover:bg-orange-500 text-white py-4 px-10 rounded-xl text-sm font-semibold tracking-tight shadow-xl shadow-orange-500/20 transition-all transform active:scale-[0.99] flex items-center justify-center gap-2 font-geist"
+            disabled={isSubmitting}
+            className="w-full sm:w-auto sm:mx-auto sm:flex bg-orange-600 hover:bg-orange-500 disabled:opacity-60 disabled:cursor-not-allowed text-white py-4 px-10 rounded-xl text-sm font-semibold tracking-tight shadow-xl shadow-orange-500/20 transition-all transform active:scale-[0.99] flex items-center justify-center gap-2 font-geist"
           >
-            Submit Application
-            <SolarIcon
-              icon="solar:arrow-right-linear"
-              className="text-lg"
-              width={18}
-              height={18}
-            />
+            {isSubmitting ? (
+              <>
+                <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                Submitting...
+              </>
+            ) : (
+              <>
+                Submit Application
+                <SolarIcon
+                  icon="solar:arrow-right-linear"
+                  className="text-lg"
+                  width={18}
+                  height={18}
+                />
+              </>
+            )}
           </button>
           <p className="text-xs text-neutral-400 text-center mt-4 font-geist">
             We review applications within 48 hours. Check your email for next

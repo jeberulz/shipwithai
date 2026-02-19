@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SolarIcon } from "@/components/ui/solar-icon";
+import { TrackableLink } from "@/components/trackable-link";
 import { navItems } from "@/lib/landing-data";
 
 export function HeroSection() {
@@ -48,12 +49,14 @@ export function HeroSection() {
               </Link>
             ))}
           </div>
-          <Link
+          <TrackableLink
             href="/apply-page"
+            trackEvent="InitiateCheckout"
+            trackParams={{ content_name: "Nav CTA" }}
             className="transition-colors hover:bg-orange-50 text-xs font-semibold text-black tracking-tight bg-white rounded-full pt-2 pr-5 pb-2 pl-5 font-geist"
           >
             Apply for Cohort I
-          </Link>
+          </TrackableLink>
         </nav>
       </div>
 
@@ -80,12 +83,14 @@ export function HeroSection() {
           and start shipping faster.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 mb-10">
-          <Link
+          <TrackableLink
             href="/apply-page"
+            trackEvent="InitiateCheckout"
+            trackParams={{ content_name: "Hero CTA" }}
             className="hover:bg-neutral-100 transition-colors shadow-white/10 text-sm font-semibold text-black tracking-tight bg-white rounded-full pt-3.5 pr-8 pb-3.5 pl-8 shadow-lg font-geist"
           >
             Join the March Bootcamp
-          </Link>
+          </TrackableLink>
           <Link
             href="/#sessions"
             className="hover:bg-white/10 transition-colors text-sm font-semibold text-white tracking-tight bg-transparent border-white/20 border rounded-full pt-3.5 pr-8 pb-3.5 pl-8 font-geist"

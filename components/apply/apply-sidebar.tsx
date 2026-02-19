@@ -1,7 +1,34 @@
 import { SolarIcon } from "@/components/ui/solar-icon";
 import { sidebarInfo } from "@/lib/apply-data";
+import type { Cohort } from "@/types/database";
 
-export function ApplySidebar() {
+type CohortData = Pick<
+  Cohort,
+  "spots_total" | "start_date" | "end_date"
+>;
+
+function formatDateRange(startDate: string | null, endDate: string | null) {
+  if (!startDate || !endDate) return null;
+  const fmt = (d: string) =>
+    new Date(d).toLocaleDateString("en-GB", {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    });
+  return `${fmt(startDate)} \u2013 ${fmt(endDate)}`;
+}
+
+export function ApplySidebar({ cohort }: { cohort: CohortData }) {
+  const dateRange = formatDateRange(cohort.start_date, cohort.end_date);
+
+  // Override timeline and spots from cohort data
+  const items = sidebarInfo.map((item) => {
+    if (item.label === "Timeline" && dateRange) {
+      return { ...item, value: dateRange };
+    }
+    return item;
+  });
+
   return (
     <>
       {/* Program Overview - Dark Card */}
@@ -15,7 +42,7 @@ export function ApplySidebar() {
           </h3>
 
           <div className="space-y-6">
-            {sidebarInfo.map((item) => (
+            {items.map((item) => (
               <div key={item.label} className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
                   <SolarIcon
@@ -55,7 +82,7 @@ export function ApplySidebar() {
               </div>
             </div>
             <p className="text-xs text-neutral-400 font-geist">
-              Be one of the first 20
+              Be one of the first {cohort.spots_total}
             </p>
           </div>
         </div>

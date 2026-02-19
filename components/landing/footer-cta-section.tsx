@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SolarIcon } from "@/components/ui/solar-icon";
+import { TrackableLink } from "@/components/trackable-link";
 
 export function FooterCtaSection() {
   return (
@@ -30,18 +31,20 @@ export function FooterCtaSection() {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link
+          <TrackableLink
             href="/apply-page"
+            trackEvent="InitiateCheckout"
+            trackParams={{ content_name: "Footer CTA" }}
             className="px-8 py-3 rounded-full bg-gradient-to-b from-orange-500 to-orange-700 text-white hover:brightness-110 transition-all shadow-[0_0_25px_rgba(234,88,12,0.2)] flex items-center gap-2 border border-orange-400/20 font-medium font-geist"
           >
-            Apply for Cohort I
+            Apply Now
             <SolarIcon
               icon="solar:arrow-right-linear"
               className="text-lg"
               width={18}
               height={18}
             />
-          </Link>
+          </TrackableLink>
           <Link
             href="#"
             className="px-8 py-3 rounded-full bg-white/5 border border-white/10 text-white hover:bg-white/10 transition-all font-medium font-geist"
@@ -131,12 +134,12 @@ export function FooterCtaSection() {
             <h4 className="text-white font-semibold font-geist">Resources</h4>
             <ul className="space-y-3 text-sm text-neutral-500">
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/blog"
                   className="transition-colors hover:text-orange-400 font-geist"
                 >
                   Blog
-                </a>
+                </Link>
               </li>
               <li>
                 <a

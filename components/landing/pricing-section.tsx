@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { SolarIcon } from "@/components/ui/solar-icon";
+import { TrackableLink } from "@/components/trackable-link";
 import { pricingTier } from "@/lib/landing-data";
 
 export function PricingSection() {
@@ -88,8 +88,10 @@ export function PricingSection() {
             </div>
 
             {/* CTA Button */}
-            <Link
+            <TrackableLink
               href={pricingTier.ctaHref}
+              trackEvent="InitiateCheckout"
+              trackParams={{ content_name: "Pricing CTA", value: 297, currency: "GBP" }}
               className="w-full text-white py-4 rounded-xl text-sm transition-colors flex items-center justify-center gap-2 font-semibold bg-orange-600 hover:bg-orange-500 font-geist shadow-[0_0_30px_rgba(234,88,12,0.3)]"
             >
               {pricingTier.ctaLabel}
@@ -99,7 +101,7 @@ export function PricingSection() {
                 width={16}
                 height={16}
               />
-            </Link>
+            </TrackableLink>
 
             {/* Refund policy */}
             <p className="text-xs text-neutral-500 text-center mt-5 leading-relaxed font-normal max-w-sm mx-auto font-geist">

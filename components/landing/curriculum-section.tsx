@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SolarIcon } from "@/components/ui/solar-icon";
+import { TrackableLink } from "@/components/trackable-link";
 import { sessionItems, includedItems } from "@/lib/landing-data";
 
 export function CurriculumSection() {
@@ -116,8 +117,10 @@ export function CurriculumSection() {
 
         {/* Bottom CTA */}
         <div className="flex flex-col items-center gap-4 mt-16">
-          <Link
+          <TrackableLink
             href="/apply-page"
+            trackEvent="InitiateCheckout"
+            trackParams={{ content_name: "Curriculum CTA" }}
             className="inline-flex items-center gap-2 bg-neutral-900 hover:bg-neutral-800 transition-colors text-white text-sm font-semibold px-8 py-3.5 rounded-full shadow-lg font-geist"
           >
             Apply for the March Cohort
@@ -127,7 +130,7 @@ export function CurriculumSection() {
               width={16}
               height={16}
             />
-          </Link>
+          </TrackableLink>
           <Link
             href="#"
             className="text-sm text-neutral-500 hover:text-neutral-700 transition-colors font-medium underline underline-offset-4 font-geist"
