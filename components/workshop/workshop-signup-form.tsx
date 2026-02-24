@@ -19,6 +19,20 @@ export function WorkshopSignupForm({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState("");
+  const [utmParams, setUtmParams] = useState<{
+    utmSource?: string;
+    utmMedium?: string;
+    utmCampaign?: string;
+  }>({});
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    setUtmParams({
+      utmSource: params.get("utm_source") || undefined,
+      utmMedium: params.get("utm_medium") || undefined,
+      utmCampaign: params.get("utm_campaign") || undefined,
+    });
+  }, []);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -37,6 +51,7 @@ export function WorkshopSignupForm({
           fullName,
           email,
           workshopSlug,
+          ...utmParams,
           _meta: { leadEventId, completeRegEventId, fbp, fbc },
         }),
       });

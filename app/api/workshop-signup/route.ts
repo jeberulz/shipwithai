@@ -45,6 +45,9 @@ export async function POST(request: Request) {
         email,
         fullName: body.fullName.trim(),
         workshopSlug,
+        utmSource: body.utmSource,
+        utmMedium: body.utmMedium,
+        utmCampaign: body.utmCampaign,
       });
     } catch (beehiivError) {
       console.error(

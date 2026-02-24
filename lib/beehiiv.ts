@@ -170,6 +170,9 @@ export async function createWorkshopSubscriber(payload: {
   email: string;
   fullName: string;
   workshopSlug: string;
+  utmSource?: string;
+  utmMedium?: string;
+  utmCampaign?: string;
 }): Promise<string> {
   const { apiKey, publicationId } = assertBeehiivConfig();
 
@@ -177,9 +180,9 @@ export async function createWorkshopSubscriber(payload: {
     email: payload.email,
     reactivate_existing: true,
     send_welcome_email: false,
-    utm_source: "shipwithai",
-    utm_medium: "workshop",
-    utm_campaign: payload.workshopSlug,
+    utm_source: payload.utmSource || "shipwithai",
+    utm_medium: payload.utmMedium || "workshop",
+    utm_campaign: payload.utmCampaign || payload.workshopSlug,
     custom_fields: [
       { name: "full_name", value: payload.fullName },
     ],

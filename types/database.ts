@@ -118,6 +118,9 @@ export type WorkshopSignupFormData = {
   fullName: string;
   email: string;
   workshopSlug: string;
+  utmSource?: string;
+  utmMedium?: string;
+  utmCampaign?: string;
   _meta?: {
     leadEventId?: string;
     completeRegEventId?: string;
