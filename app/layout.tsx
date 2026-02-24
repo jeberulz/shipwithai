@@ -22,6 +22,17 @@ export const metadata: Metadata = {
   },
   description:
     "Free live workshop: Build an AI content system with Obsidian + Claude Code. Turn one idea into a week of content across all your platforms in 60 minutes.",
+  keywords: [
+    "Obsidian",
+    "Claude Code",
+    "AI content system",
+    "content creation workshop",
+    "AI workflow",
+    "free workshop",
+  ],
+  authors: [{ name: "John Iseghohi" }],
+  creator: "Ship With AI",
+  publisher: "Ship With AI",
   alternates: {
     canonical: "/",
   },
@@ -32,6 +43,7 @@ export const metadata: Metadata = {
     url: "/",
     siteName: "Ship With AI",
     type: "website",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",

@@ -126,6 +126,9 @@ export function WorkshopSignupForm({
       <form onSubmit={handleSubmit} className="space-y-3">
         <div className="flex flex-col sm:flex-row gap-3">
           <div className="relative flex-1">
+            <label htmlFor="full-name" className="sr-only">
+              Your full name
+            </label>
             <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
               <SolarIcon
                 icon="solar:user-rounded-linear"
@@ -136,6 +139,7 @@ export function WorkshopSignupForm({
             </div>
             <input
               type="text"
+              id="full-name"
               required
               placeholder="Your name"
               value={fullName}
@@ -144,6 +148,9 @@ export function WorkshopSignupForm({
             />
           </div>
           <div className="relative flex-1">
+            <label htmlFor="email-capture" className="sr-only">
+              Your email address
+            </label>
             <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
               <SolarIcon
                 icon="solar:letter-linear"

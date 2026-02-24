@@ -6,6 +6,7 @@ const STATUS_AUTOMATION_MAP: Record<string, string | undefined> = {
   accepted: process.env.BEEHIIV_AUTOMATION_ACCEPTED,
   rejected: process.env.BEEHIIV_AUTOMATION_REJECTED,
   paid: process.env.BEEHIIV_AUTOMATION_PAID,
+  workshop_registered: process.env.BEEHIIV_AUTOMATION_WORKSHOP_REGISTERED,
 };
 
 function assertBeehiivConfig(): { apiKey: string; publicationId: string } {
@@ -218,23 +219,13 @@ export async function createWorkshopSubscriber(payload: {
     console.error("Beehiiv workshop tag failed:", tagError);
   }
 
-  const workshopAutomationId = process.env.BEEHIIV_AUTOMATION_WORKSHOP_REGISTERED;
-  if (workshopAutomationId && workshopAutomationId !== "your-automation-id-here") {
-    try {
-      await fetch(
-        `${BEEHIIV_API_URL}/publications/${publicationId}/automations/${workshopAutomationId}/journeys`,
-        {
-          method: "POST",
-          headers: {
-            Authorization: `Bearer ${apiKey}`,
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ email: payload.email }),
-        }
-      );
-    } catch (automationError) {
-      console.error("Workshop automation enrollment failed:", automationError);
-    }
+  try {
+    await enrollInAutomation(payload.email, "workshop_registered");
+  } catch (automationError) {
+    console.error(
+      "Workshop automation enrollment failed (subscriber was created):",
+      automationError instanceof Error ? automationError.message : automationError
+    );
   }
 
   return subscriberId;

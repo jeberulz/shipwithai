@@ -35,7 +35,7 @@ function HeroSection() {
       <div className="z-0 absolute top-0 right-0 bottom-0 left-0">
         <Image
           src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/variants/6e2eed6d-3318-4314-b0da-7ee3e7d578f7/1600w.png"
-          alt="Abstract AI"
+          alt="Abstract AI-generated background pattern for the Obsidian and Claude Code workshop"
           fill
           sizes="100vw"
           className="contrast-125 opacity-40 mix-blend-overlay w-full h-full object-cover grayscale"
@@ -52,6 +52,7 @@ function HeroSection() {
         <nav className="flex gap-6 shadow-black/20 text-sm bg-white/5 border-white/10 border rounded-full pt-2 pr-2 pb-2 pl-4 shadow-lg backdrop-blur-md gap-x-6 gap-y-6 items-center">
           <Link
             href="/"
+            aria-label="ContentWorkshop home"
             className="flex items-center gap-2 font-semibold tracking-tight text-white font-geist"
           >
             <SolarIcon
@@ -254,9 +255,9 @@ function WhatYoullLearnSection() {
               </div>
             </div>
             <div className="p-6 flex flex-col flex-1">
-              <h4 className="text-lg text-neutral-900 mb-2 tracking-tight font-newsreader font-light">
+              <h3 className="text-lg text-neutral-900 mb-2 tracking-tight font-newsreader font-light">
                 Why Obsidian + Claude Code
-              </h4>
+              </h3>
               <p className="text-sm text-neutral-500 leading-relaxed font-normal font-geist mt-auto">
                 Most people use the wrong tools for AI content. I&apos;ll show
                 you why this combo beats everything else I&apos;ve tried.
@@ -277,9 +278,9 @@ function WhatYoullLearnSection() {
               </div>
             </div>
             <div className="p-6 flex flex-col flex-1">
-              <h4 className="text-lg text-neutral-900 mb-2 tracking-tight font-newsreader font-light">
+              <h3 className="text-lg text-neutral-900 mb-2 tracking-tight font-newsreader font-light">
                 Live system demo
-              </h4>
+              </h3>
               <p className="text-sm text-neutral-500 leading-relaxed font-normal font-geist mt-auto">
                 Watch me turn one rough idea into LinkedIn posts, X threads,
                 and newsletter content in real time.
@@ -301,9 +302,9 @@ function WhatYoullLearnSection() {
               </div>
             </div>
             <div className="p-6 flex flex-col flex-1 z-10">
-              <h4 className="text-lg text-white mb-2 tracking-tight font-newsreader font-light">
+              <h3 className="text-lg text-white mb-2 tracking-tight font-newsreader font-light">
                 Your first working command
-              </h4>
+              </h3>
               <p className="text-sm text-neutral-400 leading-relaxed font-normal font-geist mt-auto">
                 You&apos;ll leave with something that actually runs. Not
                 theory. A system.
@@ -340,9 +341,9 @@ function ThreeStepsSection() {
                 <div className="w-10 h-10 rounded-xl border flex items-center justify-center mb-4 bg-white/5 border-white/10">
                   <span className="text-white font-newsreader">1</span>
                 </div>
-                <h4 className="text-base text-white font-medium font-geist mb-2">
+                <h3 className="text-base text-white font-medium font-geist mb-2">
                   Set up your vault
-                </h4>
+                </h3>
                 <p className="text-sm text-neutral-400 font-geist leading-relaxed">
                   Structure Obsidian for AI-powered content. Simple folders.
                   Clear system.
@@ -361,9 +362,9 @@ function ThreeStepsSection() {
                 <div className="w-10 h-10 rounded-xl border flex items-center justify-center mb-4 bg-white/5 border-white/10">
                   <span className="text-white font-newsreader">2</span>
                 </div>
-                <h4 className="text-base text-white font-medium font-geist mb-2">
+                <h3 className="text-base text-white font-medium font-geist mb-2">
                   Install Claude Code
-                </h4>
+                </h3>
                 <p className="text-sm text-neutral-400 font-geist leading-relaxed">
                   Connect Claude Code to your vault. I&apos;ll walk through
                   every step live.
@@ -382,9 +383,9 @@ function ThreeStepsSection() {
                 <div className="w-10 h-10 rounded-xl border flex items-center justify-center mb-4 bg-orange-500 text-white shadow-lg shadow-orange-500/20">
                   <span className="font-newsreader">3</span>
                 </div>
-                <h4 className="text-base text-white font-medium font-geist mb-2">
+                <h3 className="text-base text-white font-medium font-geist mb-2">
                   Run your first command
-                </h4>
+                </h3>
                 <p className="text-sm text-orange-200/70 font-geist leading-relaxed">
                   Build your first content skill. Watch it work. Take it home.
                 </p>
@@ -440,7 +441,7 @@ function HostSection() {
           <div className="lg:col-span-7 space-y-10">
             <div className="space-y-4">
               <h2 className="text-7xl md:text-8xl lg:text-9xl leading-none font-light text-neutral-900 tracking-tighter font-newsreader">
-                John
+                John Iseghohi
               </h2>
               <p className="text-xl md:text-2xl text-orange-500 font-normal tracking-tight font-geist">
                 Senior Product Designer
@@ -464,9 +465,14 @@ function HostSection() {
               <p className="text-lg leading-relaxed font-light text-neutral-600 font-geist">
                 Built multiple products using Claude Code and AI-assisted
                 workflows including{" "}
-                <span className="font-normal text-neutral-900">
+                <a
+                  href="https://useresumate.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-normal text-neutral-900 underline decoration-neutral-300 hover:decoration-orange-500 transition-colors"
+                >
                   useresumate.com
-                </span>
+                </a>
                 ,{" "}
                 <span className="font-normal text-neutral-900">
                   VibeCoder

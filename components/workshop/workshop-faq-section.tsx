@@ -6,39 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-
-const workshopFaqItems = [
-  {
-    id: "coding",
-    question: "Do I need coding experience?",
-    answer:
-      "No. I don't have any. Everything I'll show you is command-based, not code-based.",
-  },
-  {
-    id: "free",
-    question: "Is this actually free?",
-    answer:
-      "Yes. No credit card. No hidden upsell for 55 minutes. I'll mention a paid course at the end for people who want to go deeper.",
-  },
-  {
-    id: "setup",
-    question: "What do I need installed?",
-    answer:
-      "Obsidian (free) and Claude Code. I'll send setup instructions before the workshop.",
-  },
-  {
-    id: "live",
-    question: "What if I can't make it live?",
-    answer:
-      "Register anyway. I'll send the replay to everyone who signs up.",
-  },
-  {
-    id: "different",
-    question: "How is this different from YouTube tutorials?",
-    answer:
-      "You'll leave with a working system, not just information. We build it together.",
-  },
-];
+import { WORKSHOP_FAQ_ITEMS } from "@/lib/workshop-data";
 
 export function WorkshopFaqSection() {
   return (
@@ -49,12 +17,12 @@ export function WorkshopFaqSection() {
             Questions
           </div>
           <h2 className="text-4xl md:text-5xl text-neutral-900 tracking-tighter font-newsreader font-light">
-            Frequently asked
+            Frequently Asked Questions
           </h2>
         </div>
 
         <Accordion className="space-y-3" collapsible type="single">
-          {workshopFaqItems.map((item) => (
+          {WORKSHOP_FAQ_ITEMS.map((item) => (
             <AccordionItem
               className="border border-neutral-200 rounded-2xl bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 px-6"
               key={item.id}
