@@ -335,6 +335,7 @@ export const instructor: Instructor = {
   name: "John",
   role: "Senior Product Designer",
   companies: ["Amazon", "Booking.com", "Etisalat"],
+  imageSrc: "/profile.png",
   bio: [
     "14+ years designing complex products at Amazon, Booking.com, and Etisalat Telecoms. Led the launch of the <strong>Amazon Insurance Store</strong> and the <strong>Global Installment Program</strong>.",
     "Built multiple products using Claude Code and AI-assisted workflows including <strong>useresumate.com</strong>, <strong>ViceCoder</strong>, and <strong>ProductBrainBox</strong>.",

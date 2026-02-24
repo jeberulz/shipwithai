@@ -15,6 +15,7 @@ export const WORKSHOP_DETAILS = {
   instructorDescription:
     "14+ years designing complex products at Amazon, Booking.com, and Etisalat Telecoms. Built multiple products using Claude Code and AI-assisted workflows.",
   instructorEmployers: ["Amazon", "Booking.com", "Etisalat"],
+  instructorImageUrl: "/profile.png",
 } as const;
 
 export const WORKSHOP_FAQ_ITEMS = [

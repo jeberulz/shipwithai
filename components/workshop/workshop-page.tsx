@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SolarIcon } from "@/components/ui/solar-icon";
+import { WORKSHOP_DETAILS } from "@/lib/workshop-data";
 import { WorkshopSignupForm } from "./workshop-signup-form";
 import { WorkshopFaqSection } from "./workshop-faq-section";
 import { ReserveSpotNavButton, ScrollToTopCta } from "./scroll-to-top-button";
@@ -411,12 +412,13 @@ function HostSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
           {/* Left: Image & Experience */}
           <div className="lg:col-span-5 flex flex-col items-center lg:items-center gap-10">
-            <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-full bg-neutral-100 flex items-center justify-center flex-shrink-0 shadow-sm border border-neutral-200/50">
-              <SolarIcon
-                icon="solar:user-rounded-linear"
-                className="text-neutral-400"
-                width={96}
-                height={96}
+            <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden flex-shrink-0 shadow-sm border border-neutral-200/50 relative">
+              <Image
+                src={WORKSHOP_DETAILS.instructorImageUrl}
+                alt={`${WORKSHOP_DETAILS.instructorName}, ${WORKSHOP_DETAILS.instructorJobTitle}`}
+                fill
+                sizes="(max-width: 1024px) 256px, 320px"
+                className="object-cover"
               />
             </div>
 

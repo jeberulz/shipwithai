@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SolarIcon } from "@/components/ui/solar-icon";
 import { instructor } from "@/lib/landing-data";
 
@@ -16,15 +17,14 @@ export function InstructorSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left: Image */}
           <div className="lg:col-span-4 flex flex-col items-center lg:items-start gap-6">
-            <div className="w-48 h-48 lg:w-56 lg:h-56 rounded-full bg-neutral-100 border border-neutral-200 overflow-hidden shrink-0 shadow-xl">
-              <div className="flex bg-gradient-to-br from-neutral-100 to-neutral-200 w-full h-full items-center justify-center">
-                <SolarIcon
-                  icon="solar:user-rounded-linear"
-                  className="text-6xl text-neutral-400"
-                  width={64}
-                  height={64}
-                />
-              </div>
+            <div className="w-48 h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden shrink-0 shadow-xl border border-neutral-200 relative">
+              <Image
+                src={instructor.imageSrc}
+                alt={`${instructor.name}, ${instructor.role}`}
+                fill
+                sizes="(max-width: 1024px) 192px, 224px"
+                className="object-cover"
+              />
             </div>
             <div className="text-center lg:text-left">
               <p className="uppercase text-xs font-medium text-neutral-400 tracking-widest font-geist text-center mb-2">

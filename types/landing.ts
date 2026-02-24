@@ -72,6 +72,7 @@ export type Instructor = {
   bio: string[];
   quote: string;
   stats: InstructorStat[];
+  imageSrc: string;
 };
 
 export type Testimonial = {
