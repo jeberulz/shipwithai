@@ -165,3 +165,74 @@ export async function enrollInAutomation(
     throw new Error(`Beehiiv automation enrollment error: ${response.status} ${errorText}`);
   }
 }
+
+export async function createWorkshopSubscriber(payload: {
+  email: string;
+  fullName: string;
+  workshopSlug: string;
+}): Promise<string> {
+  const { apiKey, publicationId } = assertBeehiivConfig();
+
+  const body: BeehiivSubscriberPayload = {
+    email: payload.email,
+    reactivate_existing: true,
+    send_welcome_email: false,
+    utm_source: "shipwithai",
+    utm_medium: "workshop",
+    utm_campaign: payload.workshopSlug,
+    custom_fields: [
+      { name: "full_name", value: payload.fullName },
+    ],
+  };
+
+  const response = await fetch(
+    `${BEEHIIV_API_URL}/publications/${publicationId}/subscriptions`,
+    {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    }
+  );
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(`Beehiiv API error: ${response.status} ${errorText}`);
+  }
+
+  const data: BeehiivSubscriberResponse = await response.json();
+  const subscriberId = data.data.id;
+
+  try {
+    await updateBeehiivTags(
+      subscriberId,
+      [`workshop:${payload.workshopSlug}`, "source:workshop-landing"],
+      []
+    );
+  } catch (tagError) {
+    console.error("Beehiiv workshop tag failed:", tagError);
+  }
+
+  const workshopAutomationId = process.env.BEEHIIV_AUTOMATION_WORKSHOP_REGISTERED;
+  if (workshopAutomationId && workshopAutomationId !== "your-automation-id-here") {
+    try {
+      await fetch(
+        `${BEEHIIV_API_URL}/publications/${publicationId}/automations/${workshopAutomationId}/journeys`,
+        {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${apiKey}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email: payload.email }),
+        }
+      );
+    } catch (automationError) {
+      console.error("Workshop automation enrollment failed:", automationError);
+    }
+  }
+
+  return subscriberId;
+}

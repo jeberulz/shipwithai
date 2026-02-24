@@ -17,27 +17,27 @@ const newsreader = Newsreader({
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
   title: {
-    default: "Ship With AI - The Product Designer's Bootcamp",
+    default: "Obsidian + Claude Code Workshop - Build Your AI Content System",
     template: "%s | Ship With AI",
   },
   description:
-    "6 live sessions. 12 production-ready AI workflows. A repeatable system for product designers and PMs who want to stop doing busywork and start shipping faster.",
+    "Free live workshop: Build an AI content system with Obsidian + Claude Code. Turn one idea into a week of content across all your platforms in 60 minutes.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Ship With AI - The Product Designer's Bootcamp",
+    title: "Obsidian + Claude Code Workshop - Build Your AI Content System",
     description:
-      "6 live sessions. 12 production-ready AI workflows. A repeatable system for product designers and PMs who want to stop doing busywork and start shipping faster.",
+      "Free live workshop: Build an AI content system with Obsidian + Claude Code. Turn one idea into a week of content across all your platforms in 60 minutes.",
     url: "/",
     siteName: "Ship With AI",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ship With AI - The Product Designer's Bootcamp",
+    title: "Obsidian + Claude Code Workshop - Build Your AI Content System",
     description:
-      "6 live sessions. 12 production-ready AI workflows. A repeatable system for product designers and PMs who want to stop doing busywork and start shipping faster.",
+      "Free live workshop: Build an AI content system with Obsidian + Claude Code. Turn one idea into a week of content across all your platforms in 60 minutes.",
   },
 };
 

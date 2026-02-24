@@ -104,3 +104,24 @@ export type DashboardStats = {
   waitlisted: number;
   spots_remaining: number;
 };
+
+export type WorkshopRegistration = {
+  id: string;
+  email: string;
+  full_name: string;
+  workshop_slug: string;
+  beehiiv_subscriber_id: string | null;
+  registered_at: string;
+};
+
+export type WorkshopSignupFormData = {
+  fullName: string;
+  email: string;
+  workshopSlug: string;
+  _meta?: {
+    leadEventId?: string;
+    completeRegEventId?: string;
+    fbp?: string;
+    fbc?: string;
+  };
+};
