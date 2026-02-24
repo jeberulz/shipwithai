@@ -421,7 +421,7 @@ export function ApplyForm({
             {/* Attendance */}
             <div>
               <label className="text-sm font-semibold text-neutral-900 mb-2 block font-geist">
-                Can you attend 6 live sessions? (Mon/Wed/Fri, March 17-28, time
+                Can you attend 6 live sessions? (Mon/Wed/Fri, April 6-17, time
                 TBD &mdash; likely 6pm GMT){" "}
                 <span className="text-orange-500">*</span>
               </label>

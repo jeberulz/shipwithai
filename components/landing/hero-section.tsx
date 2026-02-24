@@ -67,7 +67,7 @@ export function HeroSection() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 bg-orange-400" />
             <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500" />
           </span>
-          2-WEEK BOOTCAMP STARTS MARCH 17
+          2-WEEK BOOTCAMP STARTS APRIL 6
         </div>
         <h1 className="md:text-7xl leading-[1.05] text-5xl font-light text-white tracking-tighter font-newsreader mb-6">
           Turn AI Into Your Senior
@@ -89,7 +89,7 @@ export function HeroSection() {
             trackParams={{ content_name: "Hero CTA" }}
             className="hover:bg-neutral-100 transition-colors shadow-white/10 text-sm font-semibold text-black tracking-tight bg-white rounded-full pt-3.5 pr-8 pb-3.5 pl-8 shadow-lg font-geist"
           >
-            Join the March Bootcamp
+            Join the April Bootcamp
           </TrackableLink>
           <Link
             href="/#sessions"
@@ -123,7 +123,7 @@ export function HeroSection() {
             Next Cohort
           </p>
           <p className="text-sm font-medium text-white font-geist">
-            Mar 17, 2026
+            Apr 6, 2026
           </p>
         </div>
         <div className="flex gap-2 ml-4">

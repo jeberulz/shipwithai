@@ -95,7 +95,7 @@ export const applyFaqItems: ApplyFaqItem[] = [
 ];
 
 export const sidebarInfo: SidebarInfoItem[] = [
-  { icon: "solar:calendar-date-linear", label: "Timeline", value: "March 17 \u2013 28, 2026" },
+  { icon: "solar:calendar-date-linear", label: "Timeline", value: "April 6 \u2013 17, 2026" },
   { icon: "solar:clock-circle-linear", label: "Commitment", value: "4 hours / week" },
   { icon: "solar:tag-price-linear", label: "Investment", value: "\u00A3297", badge: "Early Bird" },
 ];

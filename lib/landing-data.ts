@@ -87,7 +87,7 @@ export const sessionItems: SessionItem[] = [
   {
     number: 1,
     title: "Your AI Design Setup",
-    date: "Monday, Mar 17",
+    date: "Monday, Apr 6",
     description:
       "Go from zero to working AI design partner. Set up Claude Desktop with Cowork, connect your tools, configure your design voice, and install your first .skill.",
     keyOutcome:
@@ -97,7 +97,7 @@ export const sessionItems: SessionItem[] = [
   {
     number: 2,
     title: "Research & Discovery on Autopilot",
-    date: "Wednesday, Mar 19",
+    date: "Wednesday, Apr 8",
     description:
       "Build .skills that analyze user interview transcripts, run competitive audits, and distill stakeholder briefs into clear problem statements.",
     keyOutcome:
@@ -107,7 +107,7 @@ export const sessionItems: SessionItem[] = [
   {
     number: 3,
     title: "From Research to Requirements",
-    date: "Friday, Mar 21",
+    date: "Friday, Apr 10",
     description:
       "Build .skills that turn research outputs into PRDs, design criteria, and Jobs-to-be-Done statements. Learn to chain workflows so the output from one feeds into the next.",
     keyOutcome:
@@ -117,7 +117,7 @@ export const sessionItems: SessionItem[] = [
   {
     number: 4,
     title: "Design Documentation That Writes Itself",
-    date: "Monday, Mar 24",
+    date: "Monday, Apr 13",
     description:
       "Build .skills for design decision logs, developer handoff specs, microcopy variations, and accessibility audits. Connect Figma via MCP for the first time.",
     keyOutcome:
@@ -128,7 +128,7 @@ export const sessionItems: SessionItem[] = [
   {
     number: 5,
     title: "Build Working Prototypes Without Code",
-    date: "Wednesday, Mar 26",
+    date: "Wednesday, Apr 15",
     description:
       "Use Claude Code and Figma MCP to turn your designs into functional HTML and React prototypes. No coding experience needed. We walk through everything step by step.",
     keyOutcome:
@@ -139,7 +139,7 @@ export const sessionItems: SessionItem[] = [
   {
     number: 6,
     title: "Your Personal AI Design System",
-    date: "Friday, Mar 28",
+    date: "Friday, Apr 17",
     description:
       "Learn the Skill Maker meta-framework to build any .skill from scratch in under 15 minutes. Set up your personal skill library and team sharing.",
     keyOutcome:
@@ -228,7 +228,7 @@ export const bonusItems: BonusItem[] = [
     icon: "solar:map-linear",
     title: "The AI Tools Landscape for Designers",
     description:
-      "A no-fluff guide to the best AI tools for product designers as of March 2026. Claude, Figma Make, Figma MCP, Weavy AI, Google Stitch, Cursor, v0, and how they fit together.",
+      "A no-fluff guide to the best AI tools for product designers as of April 2026. Claude, Figma Make, Figma MCP, Weavy AI, Google Stitch, Cursor, v0, and how they fit together.",
     worth: "£79",
   },
   {

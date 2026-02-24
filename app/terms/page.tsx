@@ -42,7 +42,7 @@ export default function TermsPage() {
             <li>Access to bonuses as described at the time of purchase</li>
           </ul>
           <p className="text-neutral-600 leading-relaxed mt-4">
-            Dates: March 17–28, 2026 (or as stated for your cohort). We may adjust session times with reasonable notice.
+            Dates: April 6–17, 2026 (or as stated for your cohort). We may adjust session times with reasonable notice.
           </p>
         </section>
 
