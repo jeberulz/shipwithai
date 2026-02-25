@@ -25,6 +25,41 @@ export async function POST(request: Request) {
     const email = body.email.toLowerCase().trim();
     const workshopSlug = body.workshopSlug || "obsidian-claude-code-workshop";
 
+    // Validate workshop exists and is accepting registrations
+    const { data: workshop } = await supabase
+      .from("workshops")
+      .select("slug, status, capacity")
+      .eq("slug", workshopSlug)
+      .maybeSingle();
+
+    if (!workshop) {
+      return NextResponse.json(
+        { error: "Workshop not found" },
+        { status: 404 }
+      );
+    }
+
+    if (workshop.status === "completed" || workshop.status === "archived") {
+      return NextResponse.json(
+        { error: "Registration for this workshop is closed" },
+        { status: 400 }
+      );
+    }
+
+    if (workshop.capacity) {
+      const { count } = await supabase
+        .from("workshop_registrations")
+        .select("*", { count: "exact", head: true })
+        .eq("workshop_slug", workshopSlug);
+
+      if (count !== null && count >= workshop.capacity) {
+        return NextResponse.json(
+          { error: "This workshop is full" },
+          { status: 400 }
+        );
+      }
+    }
+
     const { data: existing } = await supabase
       .from("workshop_registrations")
       .select("id")

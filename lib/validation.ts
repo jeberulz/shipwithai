@@ -39,3 +39,36 @@ export function validateCohortPayload(payload: {
 
   return null;
 }
+
+export function validateWorkshopPayload(payload: {
+  name?: string;
+  slug?: string;
+  date_time?: string;
+  end_time?: string | null;
+  capacity?: number | null;
+}): string | null {
+  if (payload.name !== undefined && !payload.name.trim()) {
+    return "Name is required";
+  }
+
+  if (payload.slug !== undefined) {
+    if (!payload.slug.trim()) return "Slug is required";
+    if (!SLUG_REGEX.test(payload.slug)) {
+      return "Slug must be lowercase letters, numbers, and hyphens only";
+    }
+  }
+
+  if (payload.capacity !== undefined && payload.capacity !== null) {
+    if (!Number.isInteger(payload.capacity) || payload.capacity < 1) {
+      return "Capacity must be a positive integer";
+    }
+  }
+
+  if (payload.date_time && payload.end_time) {
+    if (new Date(payload.end_time) <= new Date(payload.date_time)) {
+      return "End time must be after start time";
+    }
+  }
+
+  return null;
+}

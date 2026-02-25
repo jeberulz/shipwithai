@@ -21,6 +21,11 @@ const navItems = [
     href: "/admin/cohorts",
     icon: "solar:users-group-rounded-linear",
   },
+  {
+    label: "Workshops",
+    href: "/admin/workshops",
+    icon: "solar:presentation-graph-linear",
+  },
 ];
 
 export function AdminNav() {

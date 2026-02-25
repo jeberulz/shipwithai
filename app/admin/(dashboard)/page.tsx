@@ -24,8 +24,18 @@ export default async function AdminDashboard({
     .select("id, name, status")
     .order("created_at", { ascending: false });
 
-  const [{ data: applications }, { data: cohorts }, { data: allCohorts }] =
-    await Promise.all([appQuery, cohortQuery, allCohortsQuery]);
+  const workshopsQuery = supabase
+    .from("workshops")
+    .select("id, name, slug, status, capacity, workshop_registrations(count)")
+    .in("status", ["upcoming", "live"])
+    .order("date_time", { ascending: true });
+
+  const [
+    { data: applications },
+    { data: cohorts },
+    { data: allCohorts },
+    { data: activeWorkshops },
+  ] = await Promise.all([appQuery, cohortQuery, allCohortsQuery, workshopsQuery]);
 
   const apps = applications || [];
   const spotsTotal = cohort_id
@@ -118,6 +128,27 @@ export default async function AdminDashboard({
           icon="solar:close-circle-linear"
         />
       </div>
+
+      {activeWorkshops && activeWorkshops.length > 0 && (
+        <>
+          <h2 className="text-lg font-light text-neutral-900 tracking-tight font-newsreader mt-8 mb-4">
+            Active Workshops
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {activeWorkshops.map((w) => (
+              <StatCard
+                key={w.id}
+                label={w.name}
+                value={
+                  (w.workshop_registrations as unknown as { count: number }[])?.[0]
+                    ?.count ?? 0
+                }
+                icon="solar:presentation-graph-linear"
+              />
+            ))}
+          </div>
+        </>
+      )}
     </div>
   );
 }

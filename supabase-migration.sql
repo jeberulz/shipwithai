@@ -96,7 +96,75 @@ CREATE POLICY "Public can insert applications"
 -- Service role key (used by admin API routes) bypasses RLS automatically
 
 -- ═══════════════════════════════════════════
+-- WORKSHOPS TABLE
+-- ═══════════════════════════════════════════
+CREATE TABLE public.workshops (
+  id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+  name TEXT NOT NULL,
+  slug TEXT NOT NULL UNIQUE,
+  description TEXT,
+  date_time TIMESTAMPTZ NOT NULL,
+  end_time TIMESTAMPTZ,
+  status TEXT NOT NULL DEFAULT 'upcoming' CHECK (status IN ('upcoming', 'live', 'completed', 'archived')),
+  capacity INTEGER,
+  location TEXT NOT NULL DEFAULT 'Online (Zoom)',
+  created_at TIMESTAMPTZ DEFAULT NOW(),
+  updated_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+CREATE INDEX idx_workshops_slug ON public.workshops(slug);
+CREATE INDEX idx_workshops_status ON public.workshops(status);
+
+-- ═══════════════════════════════════════════
+-- WORKSHOP REGISTRATIONS TABLE
+-- ═══════════════════════════════════════════
+CREATE TABLE public.workshop_registrations (
+  id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+  workshop_slug TEXT NOT NULL REFERENCES public.workshops(slug) ON DELETE RESTRICT,
+  email TEXT NOT NULL,
+  full_name TEXT NOT NULL,
+  beehiiv_subscriber_id TEXT,
+  registered_at TIMESTAMPTZ DEFAULT NOW(),
+  UNIQUE(email, workshop_slug)
+);
+
+CREATE INDEX idx_workshop_registrations_slug ON public.workshop_registrations(workshop_slug);
+CREATE INDEX idx_workshop_registrations_email ON public.workshop_registrations(email);
+
+-- Workshop triggers
+CREATE TRIGGER set_workshops_updated_at
+  BEFORE UPDATE ON public.workshops
+  FOR EACH ROW
+  EXECUTE FUNCTION update_updated_at_column();
+
+-- Workshop RLS
+ALTER TABLE public.workshops ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.workshop_registrations ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Public can read upcoming workshops"
+  ON public.workshops FOR SELECT
+  USING (status IN ('upcoming', 'live'));
+
+CREATE POLICY "Public can insert workshop registrations"
+  ON public.workshop_registrations FOR INSERT
+  WITH CHECK (true);
+
+-- ═══════════════════════════════════════════
 -- SEED: First cohort
 -- ═══════════════════════════════════════════
 INSERT INTO public.cohorts (name, slug, spots_total, status, start_date, end_date)
 VALUES ('Cohort I', 'cohort-1', 20, 'open', '2026-03-17', '2026-03-28');
+
+-- ═══════════════════════════════════════════
+-- SEED: First workshop
+-- ═══════════════════════════════════════════
+INSERT INTO public.workshops (name, slug, description, date_time, end_time, status, location)
+VALUES (
+  'Obsidian + Claude Code Workshop',
+  'obsidian-claude-code-workshop',
+  'Build an AI content system with Obsidian + Claude Code. Turn one idea into a week of content across all your platforms in 60 minutes.',
+  '2026-03-05T18:00:00+00:00',
+  '2026-03-05T19:00:00+00:00',
+  'upcoming',
+  'Online (Zoom)'
+);

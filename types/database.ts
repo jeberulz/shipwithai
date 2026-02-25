@@ -105,6 +105,48 @@ export type DashboardStats = {
   spots_remaining: number;
 };
 
+export type WorkshopStatus = "upcoming" | "live" | "completed" | "archived";
+
+export type Workshop = {
+  id: string;
+  name: string;
+  slug: string;
+  description: string | null;
+  date_time: string;
+  end_time: string | null;
+  status: WorkshopStatus;
+  capacity: number | null;
+  location: string;
+  created_at: string;
+  updated_at: string;
+};
+
+export type WorkshopWithCount = Workshop & {
+  workshop_registrations: [{ count: number }];
+};
+
+export type WorkshopCreatePayload = {
+  name: string;
+  slug: string;
+  description?: string | null;
+  date_time: string;
+  end_time?: string | null;
+  capacity?: number | null;
+  location?: string;
+};
+
+export type WorkshopUpdatePayload = {
+  id: string;
+  name?: string;
+  slug?: string;
+  description?: string | null;
+  date_time?: string;
+  end_time?: string | null;
+  status?: WorkshopStatus;
+  capacity?: number | null;
+  location?: string;
+};
+
 export type WorkshopRegistration = {
   id: string;
   email: string;
