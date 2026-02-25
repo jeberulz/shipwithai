@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "/opengraph-image",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Obsidian + Claude Code Workshop - Build Your AI Content System in 60 Minutes",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     title: "Obsidian + Claude Code Workshop - Build Your AI Content System",
     description:
       "Free live workshop: Build an AI content system with Obsidian + Claude Code. Turn one idea into a week of content across all your platforms in 60 minutes.",
-    images: ["/opengraph-image"],
+    images: ["/og-image.png"],
   },
 };
 

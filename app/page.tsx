@@ -48,7 +48,7 @@ export default function Home() {
           availability: "https://schema.org/InStock",
           url: siteUrl,
         },
-        image: `${siteUrl}/opengraph-image`,
+        image: `${siteUrl}/og-image.png`,
         url: siteUrl,
         isAccessibleForFree: true,
       },
