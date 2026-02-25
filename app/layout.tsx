@@ -44,12 +44,23 @@ export const metadata: Metadata = {
     siteName: "Ship With AI",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Obsidian + Claude Code Workshop - Build Your AI Content System in 60 Minutes",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
+    site: "@mrjeberulz",
+    creator: "@mrjeberulz",
     title: "Obsidian + Claude Code Workshop - Build Your AI Content System",
     description:
       "Free live workshop: Build an AI content system with Obsidian + Claude Code. Turn one idea into a week of content across all your platforms in 60 minutes.",
+    images: ["/opengraph-image"],
   },
 };
 

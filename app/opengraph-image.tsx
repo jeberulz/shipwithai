@@ -86,7 +86,7 @@ export default async function Image() {
           }}
         >
           <div style={{ fontSize: "18px", fontWeight: 600, color: "#f97316" }}>
-            shipwithai.com
+            designandcodewithai.com
           </div>
           <div style={{ color: "#525252" }}>|</div>
           <div style={{ fontSize: "16px", color: "#737373" }}>
