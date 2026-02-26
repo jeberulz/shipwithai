@@ -4,6 +4,14 @@ import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { SolarIcon } from "@/components/ui/solar-icon";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogFooter,
+} from "@/components/ui/dialog";
 import type { Workshop, WorkshopRegistration } from "@/types/database";
 
 export default function WorkshopRegistrationsPage() {
@@ -16,6 +24,9 @@ export default function WorkshopRegistrationsPage() {
   const [page, setPage] = useState(1);
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(true);
+  const [deleteTarget, setDeleteTarget] =
+    useState<WorkshopRegistration | null>(null);
+  const [isDeleting, setIsDeleting] = useState(false);
   const limit = 50;
 
   const fetchRegistrations = useCallback(async () => {
@@ -61,6 +72,23 @@ export default function WorkshopRegistrationsPage() {
   function handleSearch(value: string) {
     setSearch(value);
     setPage(1);
+  }
+
+  async function handleDelete() {
+    if (!deleteTarget) return;
+    setIsDeleting(true);
+    try {
+      const response = await fetch(
+        `/api/admin/workshops/${slug}/registrations/${deleteTarget.id}`,
+        { method: "DELETE" }
+      );
+      if (response.ok) {
+        setDeleteTarget(null);
+        fetchRegistrations();
+      }
+    } finally {
+      setIsDeleting(false);
+    }
   }
 
   return (
@@ -120,12 +148,15 @@ export default function WorkshopRegistrationsPage() {
               <th className="text-left text-xs font-medium text-neutral-500 px-5 py-3 font-geist">
                 Registered
               </th>
+              <th className="text-left text-xs font-medium text-neutral-500 px-5 py-3 font-geist w-10">
+                Actions
+              </th>
             </tr>
           </thead>
           <tbody>
             {loading ? (
               <tr>
-                <td colSpan={3} className="text-center py-12">
+                <td colSpan={4} className="text-center py-12">
                   <div className="flex items-center justify-center gap-2 text-sm text-neutral-400 font-geist">
                     <div className="w-4 h-4 border-2 border-neutral-300 border-t-orange-500 rounded-full animate-spin" />
                     Loading...
@@ -135,7 +166,7 @@ export default function WorkshopRegistrationsPage() {
             ) : registrations.length === 0 ? (
               <tr>
                 <td
-                  colSpan={3}
+                  colSpan={4}
                   className="text-center py-12 text-sm text-neutral-400 font-geist"
                 >
                   {search
@@ -147,7 +178,7 @@ export default function WorkshopRegistrationsPage() {
               registrations.map((reg) => (
                 <tr
                   key={reg.id}
-                  className="border-b border-neutral-50 last:border-0 hover:bg-neutral-50 transition-colors"
+                  className="border-b border-neutral-50 last:border-0 hover:bg-neutral-50 transition-colors group"
                 >
                   <td className="px-5 py-3.5 text-sm text-neutral-900 font-geist">
                     {reg.full_name}
@@ -163,6 +194,21 @@ export default function WorkshopRegistrationsPage() {
                       hour: "2-digit",
                       minute: "2-digit",
                     })}
+                  </td>
+                  <td className="px-5 py-3.5">
+                    <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                      <button
+                        onClick={() => setDeleteTarget(reg)}
+                        className="p-1 rounded-lg hover:bg-red-50 transition-colors"
+                      >
+                        <SolarIcon
+                          icon="solar:trash-bin-trash-linear"
+                          className="text-neutral-400 hover:text-red-500 transition-colors"
+                          width={15}
+                          height={15}
+                        />
+                      </button>
+                    </div>
                   </td>
                 </tr>
               ))
@@ -194,6 +240,45 @@ export default function WorkshopRegistrationsPage() {
           </div>
         </div>
       )}
+
+      <Dialog
+        open={!!deleteTarget}
+        onOpenChange={(open) => !open && setDeleteTarget(null)}
+      >
+        <DialogContent className="font-geist">
+          <DialogHeader>
+            <DialogTitle className="font-geist">
+              Delete registration
+            </DialogTitle>
+          </DialogHeader>
+          <p className="text-sm text-neutral-500">
+            Are you sure you want to remove{" "}
+            <span className="font-medium text-neutral-700">
+              {deleteTarget?.full_name}
+            </span>{" "}
+            ({deleteTarget?.email})? This will remove them from the workshop list
+            and unsubscribe them from Beehiiv.
+          </p>
+          <DialogFooter>
+            <Button
+              variant="outline"
+              onClick={() => setDeleteTarget(null)}
+              className="rounded-xl text-xs"
+              size="sm"
+            >
+              Cancel
+            </Button>
+            <Button
+              onClick={handleDelete}
+              disabled={isDeleting}
+              className="bg-red-600 hover:bg-red-500 text-white rounded-xl text-xs"
+              size="sm"
+            >
+              Delete
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

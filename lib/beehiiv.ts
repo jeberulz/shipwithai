@@ -230,3 +230,24 @@ export async function createWorkshopSubscriber(payload: {
 
   return subscriberId;
 }
+
+export async function unsubscribeBeehiivSubscriber(
+  subscriberId: string
+): Promise<void> {
+  const { apiKey, publicationId } = assertBeehiivConfig();
+  const response = await fetch(
+    `${BEEHIIV_API_URL}/publications/${publicationId}/subscriptions/${subscriberId}`,
+    {
+      method: "PUT",
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ unsubscribe: true }),
+    }
+  );
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(`Beehiiv unsubscribe error: ${response.status} ${errorText}`);
+  }
+}
