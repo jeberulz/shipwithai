@@ -16,7 +16,7 @@ const newsreader = Newsreader({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(getSiteUrl()),
+  metadataBase: new URL("https://www.designandcodewithai.com"),
   title: {
     default: "Obsidian + Claude Code Workshop - Build Your AI Content System",
     template: "%s | Ship With AI",

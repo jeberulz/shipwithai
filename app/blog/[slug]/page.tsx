@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     };
   }
 
-  const siteUrl = getSiteUrl();
+  const siteUrl = "https://www.designandcodewithai.com";
   const canonicalUrl = `${siteUrl}/blog/${post.slug}`;
   const openGraphImage = post.coverImage ?? "/images/blog/default-og.jpg";
 
