@@ -96,10 +96,10 @@ function HeroSection() {
       <div className="z-10 mt-8 pt-8 border-t border-white/10 grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl w-full">
         <div>
           <p className="md:text-3xl text-2xl font-light text-white tracking-tighter font-newsreader">
-            2,000+
+            200+
           </p>
           <p className="text-xs font-medium text-neutral-500 font-geist mt-1">
-            Registered for workshop
+            Students Taught
           </p>
         </div>
         <div>
