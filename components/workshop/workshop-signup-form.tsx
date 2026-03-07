@@ -117,9 +117,9 @@ export function WorkshopSignupForm({
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
         <div>
           <p className="text-xs text-neutral-400 uppercase tracking-widest font-medium font-geist mb-3">
-            Workshop starts March 5
+            Workshop starts March 19
           </p>
-          <CountdownTimer targetDate={new Date("2026-03-05T18:00:00Z")} />
+          <CountdownTimer targetDate={new Date("2026-03-19T18:00:00Z")} />
         </div>
       </div>
 

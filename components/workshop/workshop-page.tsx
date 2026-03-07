@@ -578,7 +578,7 @@ function FooterSection() {
         <p className="text-neutral-500 text-sm font-geist font-medium flex items-center justify-center gap-2 flex-wrap mb-4">
           <span className="text-neutral-300">John Iseghohi</span>
           <span className="hidden sm:inline">&middot;</span>
-          <span>March 5th, 2026</span>
+          <span>March 19th, 2026</span>
           <span className="hidden sm:inline">&middot;</span>
           <span>6:00 PM GMT</span>
         </p>

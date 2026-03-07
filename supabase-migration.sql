@@ -163,8 +163,8 @@ VALUES (
   'Obsidian + Claude Code Workshop',
   'obsidian-claude-code-workshop',
   'Build an AI content system with Obsidian + Claude Code. Turn one idea into a week of content across all your platforms in 60 minutes.',
-  '2026-03-05T18:00:00+00:00',
-  '2026-03-05T19:00:00+00:00',
+  '2026-03-19T18:00:00+00:00',
+  '2026-03-19T19:00:00+00:00',
   'upcoming',
   'Online (Zoom)'
 );
