@@ -26,6 +26,11 @@ const navItems = [
     href: "/admin/workshops",
     icon: "solar:presentation-graph-linear",
   },
+  {
+    label: "Slides",
+    href: "/admin/slides",
+    icon: "solar:slideshow-linear",
+  },
 ];
 
 export function AdminNav() {
